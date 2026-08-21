@@ -31,3 +31,6 @@
 [submodule "grammars/cpp"]
 	path = grammars/cpp
 	url = https://github.com/tree-sitter/tree-sitter-cpp
+[submodule "grammars/groovy"]
+	path = grammars/groovy
+	url = https://github.com/dekobon/tree-sitter-groovy

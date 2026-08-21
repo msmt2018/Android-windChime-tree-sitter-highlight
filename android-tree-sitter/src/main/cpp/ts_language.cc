@@ -92,7 +92,7 @@ static jint TSLanguage_symType(JNIEnv *env, jclass self, jlong ptr, jint sym) {
 
 static jint TSLanguage_langVer(JNIEnv *env, jclass self, jlong ptr) {
   req_nnp(env, ptr);
-  return (jint) ts_language_version((TSLanguage *) ptr);
+  return (jint) ts_language_abi_version((TSLanguage *) ptr);
 }
 
 static jlongArray TSLanguage_loadLanguage(JNIEnv *env,

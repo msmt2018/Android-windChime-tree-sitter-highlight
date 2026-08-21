@@ -10,6 +10,12 @@
     ]
   },
   {
+    "name": "groovy",
+    "src.extra": [
+      "src/scanner.c"
+    ]
+  },
+  {
     "name": "aidl",
     "src.extra": []
   },
