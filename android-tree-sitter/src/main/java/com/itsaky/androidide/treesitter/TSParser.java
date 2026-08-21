@@ -300,7 +300,9 @@ public class TSParser extends TSNativeObject {
    *
    * <p>If the ranges parameter is an empty array, then the entire document will be parsed.
    * Otherwise, the given ranges must be ordered from earliest to latest in the document, and they
-   * must not overlap. That is, the following must hold for all `i` < `length - 1`:
+   * must not overlap. As this binding supplies UTF-16LE input, every range byte offset must also be
+   * divisible by two; an offset inside a UTF-16 code unit is rejected with
+   * {@link IllegalArgumentException}. That is, the following must hold for all `i` < `length - 1`:
    * ranges[i].end_byte <= ranges[i + 1].start_byte where `length` is the length of the ranges
    * array.
    *

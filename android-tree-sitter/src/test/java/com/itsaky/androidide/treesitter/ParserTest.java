@@ -125,26 +125,16 @@ public class ParserTest extends TreeSitterTest {
     }
   }
 
-  @Test
-  public void testIncrementalParsing() throws UnsupportedEncodingException {
+  @Test(expected = IllegalArgumentException.class)
+  public void testIncrementalParsingRejectsInvalidUtf16ByteBoundary() {
     try (final var parser = TSParser.create()) {
       parser.setLanguage(TSLanguageJava.getInstance());
 
-      // the start byte below is invalid as it is in the middle of a character
-      // It should fail in this case
+      // Android Tree-sitter supplies UTF-16LE input. Offset 21 is between the
+      // two bytes of an ASCII UTF-16 code unit, so it is not a valid range
+      // boundary and must be rejected before native parsing begins.
       parser.setIncludedRanges(
-        new TSRange[]{TSRange.create(21, 65, TSPoint.create(0, 21), TSPoint.create(0, 65))});
-
-      final var source = "public class Main { class Inner { public static void main() {} } }";
-      try (final var tree = parser.parseString(source)) {
-        assertThat(tree).isNotNull();
-
-        final var root = tree.getRootNode();
-        assertThat(root).isNotNull();
-
-        // errorneous type
-        assertThat(root.getChild(0).getType()).isEqualTo("ERROR");
-      }
+        new TSRange[]{TSRange.create(21, 64, TSPoint.create(0, 21), TSPoint.create(0, 64))});
     }
   }
 

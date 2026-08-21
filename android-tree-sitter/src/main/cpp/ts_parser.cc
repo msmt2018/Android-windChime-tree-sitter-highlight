@@ -212,6 +212,17 @@ TSParser_setIncludedRanges(
     std::string msg = std::string("ranges[") + std::to_string(i) + "]";
     req_nnp(env, range, msg);
     tsRanges[i] = _unmarshalRange(env, range);
+
+    // This binding always supplies TSInputEncodingUTF16LE. Tree-sitter byte
+    // ranges therefore must begin and end on a two-byte UTF-16 code-unit
+    // boundary. Do not let the runtime silently reinterpret an odd offset.
+    if ((tsRanges[i].start_byte & 1u) != 0 ||
+        (tsRanges[i].end_byte & 1u) != 0) {
+      const std::string error = std::string("ranges[") + std::to_string(i) +
+          "] has a byte offset in the middle of a UTF-16 code unit";
+      throw_illegal_args(env, error.c_str());
+      return JNI_FALSE;
+    }
   }
 
   const TSRange *r = tsRanges;
