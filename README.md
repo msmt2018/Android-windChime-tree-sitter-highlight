@@ -1,7 +1,3 @@
-> [!WARNING]
-> 
-> THIS PROJECT IS NOT MAINTAINED ANYMORE. 
-
 # android-tree-sitter
 
 <a href="https://github.com/itsaky/AndroidIDE"><img src="https://androidide.com/github/img/androidide.php?part&for-the-badge"/></a><br><br>

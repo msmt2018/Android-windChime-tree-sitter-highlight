@@ -32,7 +32,7 @@ public class TreeSitterTest {
 
   @Test
   public void test() {
-    assertThat(TreeSitter.getLanguageVersion()).isEqualTo(14);
+    assertThat(TreeSitter.getLanguageVersion()).isEqualTo(15);
     assertThat(TreeSitter.getMinimumCompatibleLanguageVersion()).isEqualTo(13);
   }
 }
