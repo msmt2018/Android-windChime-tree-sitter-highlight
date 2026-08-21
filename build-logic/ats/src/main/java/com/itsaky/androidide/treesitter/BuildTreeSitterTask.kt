@@ -36,14 +36,22 @@ abstract class BuildTreeSitterTask : DefaultTask() {
       return
     }
 
-    val cliDir = project.rootProject.file("tree-sitter-lib/cli")
-    val buildDir = File(cliDir, "build")
+    // Tree-sitter 0.26 moved the CLI crate from cli/ to crates/cli.
+    // Keep the output location stable for GenerateTreeSitterGrammarTask.
+    val treeSitterDir = project.rootProject.file("tree-sitter-lib")
+    val cliManifest = File(treeSitterDir, "crates/cli/Cargo.toml")
+    val buildDir = File(treeSitterDir, "cli/build")
 
-    val cmd = arrayOf("cargo", "b", "--target-dir", buildDir.absolutePath, "--release")
+    val cmd = arrayOf(
+      "cargo", "build",
+      "--manifest-path", cliManifest.absolutePath,
+      "--target-dir", buildDir.absolutePath,
+      "--release"
+    )
 
     project.logger.info(
       "Building tree-sitter-cli with command ${cmd.joinToString(separator = " ")}")
 
-    project.executeCommand(cliDir.absolutePath, command = cmd)
+    project.executeCommand(treeSitterDir.absolutePath, command = cmd)
   }
 }
