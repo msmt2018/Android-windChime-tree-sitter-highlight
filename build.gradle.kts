@@ -106,6 +106,7 @@ subprojects {
     "android-tree-sitter",
     "annotations",
     "tree-sitter-cpp",
+    "tree-sitter-groovy",
     "tree-sitter-java",
     "tree-sitter-json",
     "tree-sitter-kotlin",
