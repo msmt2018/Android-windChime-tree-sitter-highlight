@@ -1,12 +1,12 @@
-name: Publish libraries to GitHub Packages
+name: Publish GitHub Packages
 
 on:
   workflow_dispatch:
     inputs:
       version:
-        description: Maven package version (for example 1.0.0)
+        description: Maven package version
         required: true
-        default: 1.0.0
+        default: 0.1.0
         type: string
 
 permissions:
@@ -15,7 +15,7 @@ permissions:
 
 jobs:
   publish:
-    name: Publish selected Maven packages
+    name: Publish Maven packages
     runs-on: ubuntu-latest
 
     steps:
@@ -62,6 +62,7 @@ jobs:
             :annotations:publishReleasePublicationToGitHubPackagesRepository \
             :android-tree-sitter:publishReleasePublicationToGitHubPackagesRepository \
             :tree-sitter-cpp:publishReleasePublicationToGitHubPackagesRepository \
+            :tree-sitter-groovy:publishReleasePublicationToGitHubPackagesRepository \
             :tree-sitter-java:publishReleasePublicationToGitHubPackagesRepository \
             :tree-sitter-json:publishReleasePublicationToGitHubPackagesRepository \
             :tree-sitter-kotlin:publishReleasePublicationToGitHubPackagesRepository \
