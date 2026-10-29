@@ -1,27 +1,38 @@
+/*
+ *  This file is part of android-tree-sitter.
+ *
+ *  android-tree-sitter library is free software; you can redistribute it and/or
+ *  modify it under the terms of the GNU Lesser General Public
+ *  License as published by the Free Software Foundation; either
+ *  version 2.1 of the License, or (at your option) any later version.
+ *
+ *  android-tree-sitter library is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ *  Lesser General Public License for more details.
+ *
+ *   You should have received a copy of the GNU General Public License
+ *  along with android-tree-sitter.  If not, see <https://www.gnu.org/licenses/>.
+ */
+
 package com.zerostudio.idea.treesitter
 
 import com.android.build.gradle.internal.core.Abi
+import com.android.build.gradle.internal.ndk.NdkInfo
 import org.gradle.api.DefaultTask
 import org.gradle.api.file.DirectoryProperty
-import org.gradle.api.file.RegularFileProperty
 import org.gradle.api.provider.Property
 import org.gradle.api.tasks.InputDirectory
-import org.gradle.api.tasks.InputFile
+import org.gradle.api.tasks.Internal
 import org.gradle.api.tasks.OutputDirectory
 import org.gradle.api.tasks.TaskAction
-import org.gradle.process.ExecOperations
-import javax.inject.Inject
 import java.io.ByteArrayOutputStream
 import java.io.File
 
 /**
  * @author Akash Yadav
- * @author android_zero（github:msmt2018）已升级适配 Gradle 9.8 + AGP 9.4+
  */
 abstract class GenerateDebugSymbolsTask : DefaultTask() {
-
-  @get:Inject
-  abstract val execOperations: ExecOperations
 
   /**
    * The input directory which contains the unstripped native libraries.
@@ -35,8 +46,8 @@ abstract class GenerateDebugSymbolsTask : DefaultTask() {
   @get:OutputDirectory
   abstract val outputDirectory: DirectoryProperty
 
-  @get:InputFile
-  abstract val objcopyExecutable: RegularFileProperty
+  @get:Internal
+  abstract val ndkInfo: Property<NdkInfo>
 
   @TaskAction
   fun generateDebugSymbols() {
@@ -47,38 +58,37 @@ abstract class GenerateDebugSymbolsTask : DefaultTask() {
 
   private fun generateDebugSymbolsForFile(input: File?) {
     val file = if (input?.extension == "so") input else null ?: return
-    
     val abi = checkNotNull(Abi.getByName(file.parentFile.name)) {
       "Unsupported ABI '${file.parentFile.name}' for file '$file'"
     }
 
-    logger.info("Generating debug symbols file from: $file")
+    project.logger.info("Generating debug symbols file from: $file")
 
     val outputFile = outputDirectory.dir("" + abi.name.lowercase()).apply {
       val dir = get().asFile
-      logger.debug("Creating output directory: {}", dir)
+      project.logger.debug("Creating output directory: {}", dir)
       dir.mkdirs()
     }.let {
       File(it.get().asFile, "${file.name}.debug_info").apply {
-        logger.info("Output file for debug symbols: $this")
+        project.logger.info("Output file for debug symbols: $this")
       }
     }
 
+    val objcopyExe = ndkInfo.get().getObjcopyExecutable(abi)
     val cmdLine = arrayOf(
-      objcopyExecutable.get().asFile.absolutePath,
+      objcopyExe.absolutePath,
       "--only-keep-debug",
       file.absolutePath,
       outputFile.absolutePath
     )
 
-    logger.info("Executing cmd: ${cmdLine.joinToString(separator = " ")}")
+    project.logger.info("Executing cmd: ${cmdLine.joinToString(separator = " ")}")
 
     val output = ByteArrayOutputStream()
-    
-    val result = execOperations.exec {
-      setCommandLine(*cmdLine)
+    val result = project.exec {
+      commandLine(*cmdLine)
       standardOutput = output
-      errorOutput = output
+      errorOutput = standardOutput
       isIgnoreExitValue = true
     }
 

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="x.github.module.piecetable.PieceTreeSnapshotTest" tests="7" skipped="0" failures="3" errors="0" timestamp="2026-10-28T06:46:01.576Z" hostname="localhost" time="0.71">
+  <properties/>
+  <testcase name="snapshotsCanBeReadWhileTheBufferIsEdited()" classname="x.github.module.piecetable.PieceTreeSnapshotTest" time="0.513">
+    <failure message="org.opentest4j.AssertionFailedError: 3 wrong reads, first: reader 0: java.lang.StringIndexOutOfBoundsException: Range [58, -2147483591) out of bounds for length 199" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 3 wrong reads, first: reader 0: java.lang.StringIndexOutOfBoundsException: Range [58, -2147483591) out of bounds for length 199
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:38)
+	at org.junit.jupiter.api.Assertions.fail(Assertions.java:138)
+	at kotlin.test.junit5.JUnit5Asserter.fail(JUnitSupport.kt:56)
+	at kotlin.test.Asserter.assertTrue(Assertions.kt:766)
+	at kotlin.test.junit5.JUnit5Asserter.assertTrue(JUnitSupport.kt:30)
+	at kotlin.test.Asserter.assertTrue(Assertions.kt:776)
+	at kotlin.test.junit5.JUnit5Asserter.assertTrue(JUnitSupport.kt:30)
+	at kotlin.test.AssertionsKt__AssertionsKt.assertTrue(Assertions.kt:44)
+	at kotlin.test.AssertionsKt.assertTrue(Unknown Source)
+	at x.github.module.piecetable.PieceTreeSnapshotTest.snapshotsCanBeReadWhileTheBufferIsEdited(PieceTreeSnapshotTest.kt:233)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+</failure>
+  </testcase>
+  <testcase name="snapshotKeepsItsContentWhileTheBufferChanges()" classname="x.github.module.piecetable.PieceTreeSnapshotTest" time="0.006">
+    <failure message="java.lang.StringIndexOutOfBoundsException: Range [9, -2147483640) out of bounds for length 12" type="java.lang.StringIndexOutOfBoundsException">java.lang.StringIndexOutOfBoundsException: Range [9, -2147483640) out of bounds for length 12
+	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:55)
+	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:52)
+	at java.base/jdk.internal.util.Preconditions$4.apply(Preconditions.java:213)
+	at java.base/jdk.internal.util.Preconditions$4.apply(Preconditions.java:210)
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:98)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckFromToIndex(Preconditions.java:112)
+	at java.base/jdk.internal.util.Preconditions.checkFromToIndex(Preconditions.java:349)
+	at java.base/java.lang.AbstractStringBuilder.substring(AbstractStringBuilder.java:1091)
+	at java.base/java.lang.StringBuilder.substring(StringBuilder.java:91)
+	at java.base/java.lang.AbstractStringBuilder.subSequence(AbstractStringBuilder.java:1073)
+	at java.base/java.lang.StringBuilder.subSequence(StringBuilder.java:91)
+	at x.github.module.piecetable.PieceTreeSnapshot.getNearestChunk(pieceTreeSnapshot.kt:139)
+	at x.github.module.piecetable.PieceTreeSnapshot.getNearestChunk$default(pieceTreeSnapshot.kt:128)
+	at x.github.module.piecetable.PieceTreeSnapshotTest.spotCheck(PieceTreeSnapshotTest.kt:55)
+	at x.github.module.piecetable.PieceTreeSnapshotTest.assertSnapshot(PieceTreeSnapshotTest.kt:86)
+	at x.github.module.piecetable.PieceTreeSnapshotTest.snapshotKeepsItsContentWhileTheBufferChanges(PieceTreeSnapshotTest.kt:112)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+</failure>
+  </testcase>
+  <testcase name="invalidArgumentsThrow()" classname="x.github.module.piecetable.PieceTreeSnapshotTest" time="0.121"/>
+  <testcase name="snapshotsStayAtTheirVersion()" classname="x.github.module.piecetable.PieceTreeSnapshotTest" time="0.055">
+    <failure message="java.lang.StringIndexOutOfBoundsException: Range [7, -2147483642) out of bounds for length 222" type="java.lang.StringIndexOutOfBoundsException">java.lang.StringIndexOutOfBoundsException: Range [7, -2147483642) out of bounds for length 222
+	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:55)
+	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:52)
+	at java.base/jdk.internal.util.Preconditions$4.apply(Preconditions.java:213)
+	at java.base/jdk.internal.util.Preconditions$4.apply(Preconditions.java:210)
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:98)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckFromToIndex(Preconditions.java:112)
+	at java.base/jdk.internal.util.Preconditions.checkFromToIndex(Preconditions.java:349)
+	at java.base/java.lang.AbstractStringBuilder.substring(AbstractStringBuilder.java:1091)
+	at java.base/java.lang.StringBuilder.substring(StringBuilder.java:91)
+	at java.base/java.lang.AbstractStringBuilder.subSequence(AbstractStringBuilder.java:1073)
+	at java.base/java.lang.StringBuilder.subSequence(StringBuilder.java:91)
+	at x.github.module.piecetable.PieceTreeSnapshot.getNearestChunk(pieceTreeSnapshot.kt:139)
+	at x.github.module.piecetable.PieceTreeSnapshot.getNearestChunk$default(pieceTreeSnapshot.kt:128)
+	at x.github.module.piecetable.PieceTreeSnapshotTest.assertSnapshot(PieceTreeSnapshotTest.kt:75)
+	at x.github.module.piecetable.PieceTreeSnapshotTest.snapshotsStayAtTheirVersion(PieceTreeSnapshotTest.kt:160)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+</failure>
+  </testcase>
+  <testcase name="emptyDocumentSnapshot()" classname="x.github.module.piecetable.PieceTreeSnapshotTest" time="0.004"/>
+  <testcase name="versionIdChangesWithTheContentOnly()" classname="x.github.module.piecetable.PieceTreeSnapshotTest" time="0.002"/>
+  <testcase name="readReturnsTheBomOnlyWhenPreserved()" classname="x.github.module.piecetable.PieceTreeSnapshotTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

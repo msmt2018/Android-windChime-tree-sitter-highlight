@@ -1,0 +1,20 @@
+<lint-module
+    format="1"
+    dir="/root/xedit-app/piecetable"
+    name=":piecetable"
+    type="LIBRARY"
+    maven="xedit-app:piecetable:unspecified"
+    agpVersion="9.2.0"
+    buildFolder="build"
+    bootClassPath="/root/android-sdk/platforms/android-36/android.jar:/root/android-sdk/build-tools/37.0.0/core-lambda-stubs.jar"
+    javaSourceLevel="21"
+    compileTarget="android-36"
+    neverShrinking="true"
+    highlightGradualR8Api="false">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>

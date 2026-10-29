@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="x.github.module.piecetable.PieceTreeBaseTest" tests="86" skipped="0" failures="1" errors="0" timestamp="2026-10-28T06:46:00.379Z" hostname="localhost" time="1.188">
+  <properties/>
+  <testcase name="random CRLF bug 1()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.238"/>
+  <testcase name="random CRLF bug 2()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.004"/>
+  <testcase name="random CRLF bug 3()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.003"/>
+  <testcase name="random CRLF bug 4()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.021"/>
+  <testcase name="random CRLF bug 5()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.003"/>
+  <testcase name="random CRLF bug 6()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.003"/>
+  <testcase name="random CRLF bug 7()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.002"/>
+  <testcase name="random CRLF bug 8()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.004"/>
+  <testcase name="random CRLF bug 9()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.003"/>
+  <testcase name="random CRLF bug 10()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.003"/>
+  <testcase name="random test value in range()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.003"/>
+  <testcase name="random bug 1()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.002"/>
+  <testcase name="random bug 2()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.001"/>
+  <testcase name="random bug 3()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.003"/>
+  <testcase name="random bug 4()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.009"/>
+  <testcase name="random bug 5()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.005"/>
+  <testcase name="random bug 6()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.003"/>
+  <testcase name="random bug 7()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.002"/>
+  <testcase name="random bug 8()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.002"/>
+  <testcase name="random bug 9()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.006"/>
+  <testcase name="getNearestChunk()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.017">
+    <failure message="java.lang.StringIndexOutOfBoundsException: Range [3, -2147483646) out of bounds for length 9" type="java.lang.StringIndexOutOfBoundsException">java.lang.StringIndexOutOfBoundsException: Range [3, -2147483646) out of bounds for length 9
+	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:55)
+	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:52)
+	at java.base/jdk.internal.util.Preconditions$4.apply(Preconditions.java:213)
+	at java.base/jdk.internal.util.Preconditions$4.apply(Preconditions.java:210)
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:98)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckFromToIndex(Preconditions.java:112)
+	at java.base/jdk.internal.util.Preconditions.checkFromToIndex(Preconditions.java:349)
+	at java.base/java.lang.AbstractStringBuilder.substring(AbstractStringBuilder.java:1091)
+	at java.base/java.lang.StringBuilder.substring(StringBuilder.java:91)
+	at x.github.module.piecetable.PieceTreeBase.getNearestChunk(pieceTreeBase.kt:1177)
+	at x.github.module.piecetable.PieceTreeBase.getNearestChunk$default(pieceTreeBase.kt:1152)
+	at x.github.module.piecetable.PieceTreeBaseTest.getNearestChunk(PieceTreeBaseTest.kt:1568)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+</failure>
+  </testcase>
+  <testcase name="getLineCharCode issue 45735()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.001"/>
+  <testcase name="getLineCharCode issue 47733()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.037"/>
+  <testcase name="more inserts()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.001"/>
+  <testcase name="random tests offset bug 1()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.011"/>
+  <testcase name="insert random bug 1 prefixSumComputer cnt is 1 based()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.002"/>
+  <testcase name="add and delete 1()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.001"/>
+  <testcase name="equal 3 empty buffer()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.002"/>
+  <testcase name="random chunks 2()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.129"/>
+  <testcase name="append()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.001"/>
+  <testcase name="delete()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.001"/>
+  <testcase name="insert()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.001"/>
+  <testcase name="Line breaks replacement is not necessary when EOL is normalized 2()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.002"/>
+  <testcase name="Line breaks replacement is not necessary when EOL is normalized 3()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.001"/>
+  <testcase name="Line breaks replacement is not necessary when EOL is normalized 4()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.002"/>
+  <testcase name="equal 2 empty buffer()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.004"/>
+  <testcase name="immutable snapshot 1()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.055"/>
+  <testcase name="immutable snapshot 2()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.004"/>
+  <testcase name="immutable snapshot 3()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.009"/>
+  <testcase name="insert random bug 2 prefixSumComputer initialize does not do deep copy of UInt32Array()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.002"/>
+  <testcase name="bug 45770 FindInNode should not cross node boundary()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.013"/>
+  <testcase name="search searching from the middle()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.003"/>
+  <testcase name="get line content basic()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.001"/>
+  <testcase name="bug 45564 piece tree pieces should be immutable()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.001"/>
+  <testcase name="basic()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.001"/>
+  <testcase name="equal()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.001"/>
+  <testcase name="random insert and delete bug 1()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.003"/>
+  <testcase name="random insert and delete bug 2()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.004"/>
+  <testcase name="random insert and delete bug 3()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.002"/>
+  <testcase name="random insert and delete bug 4()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.002"/>
+  <testcase name="random insert and delete bug 5()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.002"/>
+  <testcase name="random 1()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.01"/>
+  <testcase name="random 2()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.002"/>
+  <testcase name="basic insert and delete()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.001"/>
+  <testcase name="random tests bug 1()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.002"/>
+  <testcase name="random tests bug 2()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.002"/>
+  <testcase name="render white space exception()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.003"/>
+  <testcase name="random chunk bug 1()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.003"/>
+  <testcase name="random chunk bug 2()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.003"/>
+  <testcase name="random chunk bug 3()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.001"/>
+  <testcase name="random chunk bug 4()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.001"/>
+  <testcase name="random insert delete()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.148"/>
+  <testcase name="delete centralized CR in CRLF 1()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.003"/>
+  <testcase name="delete centralized CR in CRLF 2()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.001"/>
+  <testcase name="random test value in range exception()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.004"/>
+  <testcase name="get line content after inserts and deletes()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.001"/>
+  <testcase name="delete random bug 1 forgot to update the lineFeedCnt when deletion is on one single piece()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.003"/>
+  <testcase name="Line breaks replacement is not necessary when EOL is normalized()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.002"/>
+  <testcase name="delete CR in CRLF 1()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.001"/>
+  <testcase name="delete CR in CRLF 2()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.001"/>
+  <testcase name="random bug 10()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.001"/>
+  <testcase name="random chunks()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.121"/>
+  <testcase name="get line content()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.001"/>
+  <testcase name="bug 45892 For some cases the buffer is empty but we still try to search()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.001"/>
+  <testcase name="random delete 1()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.013"/>
+  <testcase name="random delete 2()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.002"/>
+  <testcase name="random delete 3()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.001"/>
+  <testcase name="delete random bug rb tree 1()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.002"/>
+  <testcase name="delete random bug rb tree 2()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.002"/>
+  <testcase name="delete random bug rb tree 3()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.002"/>
+  <testcase name="random test 1()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.003"/>
+  <testcase name="random test 2()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.006"/>
+  <testcase name="random test 3()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.003"/>
+  <testcase name="more deletes()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.002"/>
+  <testcase name="getContentInRange()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.003"/>
+  <testcase name="splitting large change buffer()" classname="x.github.module.piecetable.PieceTreeBaseTest" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

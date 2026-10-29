@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="x.github.module.piecetable.PieceTreeEditOperationTest" tests="29" skipped="0" failures="0" errors="0" timestamp="2026-10-28T06:46:02.334Z" hostname="localhost" time="0.103">
+  <properties/>
+  <testcase name="two single inserts 1()" classname="x.github.module.piecetable.PieceTreeEditOperationTest" time="0.027"/>
+  <testcase name="two single inserts 2()" classname="x.github.module.piecetable.PieceTreeEditOperationTest" time="0.003"/>
+  <testcase name="two single deletes 1()" classname="x.github.module.piecetable.PieceTreeEditOperationTest" time="0.004"/>
+  <testcase name="two single deletes 2()" classname="x.github.module.piecetable.PieceTreeEditOperationTest" time="0.005"/>
+  <testcase name="two unrelated edits()" classname="x.github.module.piecetable.PieceTreeEditOperationTest" time="0.012"/>
+  <testcase name="two single unrelated deletes()" classname="x.github.module.piecetable.PieceTreeEditOperationTest" time="0.001"/>
+  <testcase name="one edit op is unchanged()" classname="x.github.module.piecetable.PieceTreeEditOperationTest" time="0.0"/>
+  <testcase name="multiline delete()" classname="x.github.module.piecetable.PieceTreeEditOperationTest" time="0.0"/>
+  <testcase name="multiline insert()" classname="x.github.module.piecetable.PieceTreeEditOperationTest" time="0.001"/>
+  <testcase name="many edits reversed()" classname="x.github.module.piecetable.PieceTreeEditOperationTest" time="0.001"/>
+  <testcase name="two multiline inserts 1()" classname="x.github.module.piecetable.PieceTreeEditOperationTest" time="0.0"/>
+  <testcase name="two single unrelated inserts()" classname="x.github.module.piecetable.PieceTreeEditOperationTest" time="0.001"/>
+  <testcase name="two multiline deletes 1()" classname="x.github.module.piecetable.PieceTreeEditOperationTest" time="0.001"/>
+  <testcase name="advanced simplified()" classname="x.github.module.piecetable.PieceTreeEditOperationTest" time="0.002"/>
+  <testcase name="advanced()" classname="x.github.module.piecetable.PieceTreeEditOperationTest" time="0.001"/>
+  <testcase name="two edits on one line()" classname="x.github.module.piecetable.PieceTreeEditOperationTest" time="0.001"/>
+  <testcase name="delete empty text()" classname="x.github.module.piecetable.PieceTreeEditOperationTest" time="0.001"/>
+  <testcase name="two unrelated multiline deletes()" classname="x.github.module.piecetable.PieceTreeEditOperationTest" time="0.002"/>
+  <testcase name="two replaces()" classname="x.github.module.piecetable.PieceTreeEditOperationTest" time="0.001"/>
+  <testcase name="two unrelated multiline inserts()" classname="x.github.module.piecetable.PieceTreeEditOperationTest" time="0.002"/>
+  <testcase name="replacing newlines 1()" classname="x.github.module.piecetable.PieceTreeEditOperationTest" time="0.001"/>
+  <testcase name="replacing newlines 2()" classname="x.github.module.piecetable.PieceTreeEditOperationTest" time="0.001"/>
+  <testcase name="many edits 1()" classname="x.github.module.piecetable.PieceTreeEditOperationTest" time="0.0"/>
+  <testcase name="many edits 2()" classname="x.github.module.piecetable.PieceTreeEditOperationTest" time="0.001"/>
+  <testcase name="single replace()" classname="x.github.module.piecetable.PieceTreeEditOperationTest" time="0.001"/>
+  <testcase name="Bug 19872 Undo is funky()" classname="x.github.module.piecetable.PieceTreeEditOperationTest" time="0.0"/>
+  <testcase name="single delete()" classname="x.github.module.piecetable.PieceTreeEditOperationTest" time="0.0"/>
+  <testcase name="single insert()" classname="x.github.module.piecetable.PieceTreeEditOperationTest" time="0.0"/>
+  <testcase name="insert multiple newlines()" classname="x.github.module.piecetable.PieceTreeEditOperationTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

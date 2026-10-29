@@ -23,7 +23,6 @@ import com.android.build.gradle.internal.services.DslServices;
  * Class which allows us to access protected members of {@link BasePlugin}.
  *
  * @author Akash Yadav
- * @author android_zero 适配 AGP 9.4 泛型精简
  */
 public final class BasePluginAccessor {
 
@@ -31,7 +30,7 @@ public final class BasePluginAccessor {
     throw new UnsupportedOperationException();
   }
 
-  public static DslServices getDslServices(BasePlugin<?, ?, ?, ?, ?, ?> basePlugin) {
+  public static DslServices getDslServices(BasePlugin<?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?> basePlugin) {
     return basePlugin.getDslServices();
   }
 }

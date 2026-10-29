@@ -1,0 +1,35 @@
+<libraries>
+  <library
+      name="androidx.databinding:viewbinding:9.2.0@aar"
+      jars="/root/.gradle/caches/9.8.0/transforms/1245cecf3986f39ce3d49d536645b150/transformed/viewbinding-9.2.0/jars/classes.jar"
+      resolved="androidx.databinding:viewbinding:9.2.0"
+      folder="/root/.gradle/caches/9.8.0/transforms/1245cecf3986f39ce3d49d536645b150/transformed/viewbinding-9.2.0"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.11.0@jar"
+      jars="/root/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-serialization-core-jvm/1.11.0/c1905c9bf7452b045d5af9248835abe64ddad6bf/kotlinx-serialization-core-jvm-1.11.0.jar"
+      resolved="org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.11.0"/>
+  <library
+      name="org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.11.0@jar"
+      jars="/root/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-serialization-json-jvm/1.11.0/e7e045e99e56f07599bb9ccb708c2190e2af0606/kotlinx-serialization-json-jvm-1.11.0.jar"
+      resolved="org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.11.0"/>
+  <library
+      name="org.jetbrains.kotlin:kotlin-stdlib:2.3.21@jar"
+      jars="/root/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.3.21/a2ee2c4e220fee522f0451b723bab2a43f3481a7/kotlin-stdlib-2.3.21.jar"
+      resolved="org.jetbrains.kotlin:kotlin-stdlib:2.3.21"/>
+  <library
+      name="org.jetbrains:annotations:13.0@jar"
+      jars="/root/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar"
+      resolved="org.jetbrains:annotations:13.0"/>
+  <library
+      name="androidx.annotation:annotation:1.0.0@jar"
+      jars="/root/.gradle/caches/modules-2/files-2.1/androidx.annotation/annotation/1.0.0/45599f2cd5965ac05a1488fa2a5c0cdd7c499ead/annotation-1.0.0.jar"
+      resolved="androidx.annotation:annotation:1.0.0"/>
+</libraries>

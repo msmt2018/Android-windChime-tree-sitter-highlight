@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="x.github.module.piecetable.PieceTreeBuilderTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2026-10-28T06:46:02.286Z" hostname="localhost" time="0.044">
+  <properties/>
+  <testcase name="bomOnlyAppearsOnTheFirstChunk()" classname="x.github.module.piecetable.PieceTreeBuilderTest" time="0.003"/>
+  <testcase name="normalizeEolToLf()" classname="x.github.module.piecetable.PieceTreeBuilderTest" time="0.001"/>
+  <testcase name="surrogatePairSplitAcrossChunks()" classname="x.github.module.piecetable.PieceTreeBuilderTest" time="0.001"/>
+  <testcase name="eolDetection()" classname="x.github.module.piecetable.PieceTreeBuilderTest" time="0.003"/>
+  <testcase name="normalizeEolToCrlf()" classname="x.github.module.piecetable.PieceTreeBuilderTest" time="0.001"/>
+  <testcase name="manySmallChunksProduceTheSameDocument()" classname="x.github.module.piecetable.PieceTreeBuilderTest" time="0.004"/>
+  <testcase name="rtlDetection()" classname="x.github.module.piecetable.PieceTreeBuilderTest" time="0.003"/>
+  <testcase name="bomIsStrippedAndKept()" classname="x.github.module.piecetable.PieceTreeBuilderTest" time="0.001"/>
+  <testcase name="asciiDetection()" classname="x.github.module.piecetable.PieceTreeBuilderTest" time="0.001"/>
+  <testcase name="crlfSplitAcrossChunks()" classname="x.github.module.piecetable.PieceTreeBuilderTest" time="0.0"/>
+  <testcase name="bomWithEmoji()" classname="x.github.module.piecetable.PieceTreeBuilderTest" time="0.001"/>
+  <testcase name="builderAcceptsCharSequenceInConstructor()" classname="x.github.module.piecetable.PieceTreeBuilderTest" time="0.002"/>
+  <testcase name="loneCarriageReturnIsTreatedAsLineBreak()" classname="x.github.module.piecetable.PieceTreeBuilderTest" time="0.001"/>
+  <testcase name="trailingNewLineProducesTrailingEmptyLine()" classname="x.github.module.piecetable.PieceTreeBuilderTest" time="0.001"/>
+  <testcase name="withoutNormalizationMixedEolIsPreserved()" classname="x.github.module.piecetable.PieceTreeBuilderTest" time="0.001"/>
+  <testcase name="emptyInputProducesOneEmptyLine()" classname="x.github.module.piecetable.PieceTreeBuilderTest" time="0.001"/>
+  <testcase name="unusualLineTerminators()" classname="x.github.module.piecetable.PieceTreeBuilderTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

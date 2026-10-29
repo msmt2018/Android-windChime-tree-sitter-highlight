@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="x.github.module.piecetable.PieceTreeUndoRedoTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-10-28T06:46:07.750Z" hostname="localhost" time="0.554">
+  <properties/>
+  <testcase name="basic insert undo and redo()" classname="x.github.module.piecetable.PieceTreeUndoRedoTest" time="0.542"/>
+  <testcase name="a new edit clears the redo stack()" classname="x.github.module.piecetable.PieceTreeUndoRedoTest" time="0.001"/>
+  <testcase name="multiline replace undo and redo()" classname="x.github.module.piecetable.PieceTreeUndoRedoTest" time="0.001"/>
+  <testcase name="multiline insert undo and redo()" classname="x.github.module.piecetable.PieceTreeUndoRedoTest" time="0.0"/>
+  <testcase name="basic replace undo and redo()" classname="x.github.module.piecetable.PieceTreeUndoRedoTest" time="0.001"/>
+  <testcase name="basic delete undo and redo()" classname="x.github.module.piecetable.PieceTreeUndoRedoTest" time="0.005"/>
+  <testcase name="multiline delete undo and redo()" classname="x.github.module.piecetable.PieceTreeUndoRedoTest" time="0.0"/>
+  <testcase name="content and tree stay consistent after repeated undo and redo()" classname="x.github.module.piecetable.PieceTreeUndoRedoTest" time="0.001"/>
+  <testcase name="each commit becomes its own undo entry()" classname="x.github.module.piecetable.PieceTreeUndoRedoTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

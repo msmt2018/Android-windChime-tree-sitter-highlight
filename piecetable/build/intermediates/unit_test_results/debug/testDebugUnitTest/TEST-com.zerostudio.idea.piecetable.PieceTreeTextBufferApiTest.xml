@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="x.github.module.piecetable.PieceTreeTextBufferApiTest" tests="23" skipped="0" failures="0" errors="0" timestamp="2026-10-28T06:46:07.143Z" hostname="localhost" time="0.606">
+  <properties/>
+  <testcase name="applyEditsReplace()" classname="x.github.module.piecetable.PieceTreeTextBufferApiTest" time="0.001"/>
+  <testcase name="applyEditsDelete()" classname="x.github.module.piecetable.PieceTreeTextBufferApiTest" time="0.001"/>
+  <testcase name="buffersWithDifferentChunkingAreEqual()" classname="x.github.module.piecetable.PieceTreeTextBufferApiTest" time="0.001"/>
+  <testcase name="applyEditsInsert()" classname="x.github.module.piecetable.PieceTreeTextBufferApiTest" time="0.003"/>
+  <testcase name="reverseEditsUndoAnInsert()" classname="x.github.module.piecetable.PieceTreeTextBufferApiTest" time="0.559"/>
+  <testcase name="applyEditsOverlappingRangesThrow()" classname="x.github.module.piecetable.PieceTreeTextBufferApiTest" time="0.002"/>
+  <testcase name="applyEditsReportsContentChanges()" classname="x.github.module.piecetable.PieceTreeTextBufferApiTest" time="0.001"/>
+  <testcase name="textChangeCarriesOldAndNewText()" classname="x.github.module.piecetable.PieceTreeTextBufferApiTest" time="0.001"/>
+  <testcase name="reverseEditsUndoMultipleOperations()" classname="x.github.module.piecetable.PieceTreeTextBufferApiTest" time="0.026"/>
+  <testcase name="setEolOnBufferKeepsContent()" classname="x.github.module.piecetable.PieceTreeTextBufferApiTest" time="0.001"/>
+  <testcase name="getValueLengthAndCharacterCount()" classname="x.github.module.piecetable.PieceTreeTextBufferApiTest" time="0.0"/>
+  <testcase name="getValueInRangeWithExplicitEol()" classname="x.github.module.piecetable.PieceTreeTextBufferApiTest" time="0.001"/>
+  <testcase name="lineColumnHelpers()" classname="x.github.module.piecetable.PieceTreeTextBufferApiTest" time="0.0"/>
+  <testcase name="applyEditsTouchingRangesAreAllowed()" classname="x.github.module.piecetable.PieceTreeTextBufferApiTest" time="0.001"/>
+  <testcase name="getRangeAtAndOffsetAt()" classname="x.github.module.piecetable.PieceTreeTextBufferApiTest" time="0.0"/>
+  <testcase name="reverseEditsUndoAMultilineReplace()" classname="x.github.module.piecetable.PieceTreeTextBufferApiTest" time="0.0"/>
+  <testcase name="applyEditsMultilineReplace()" classname="x.github.module.piecetable.PieceTreeTextBufferApiTest" time="0.0"/>
+  <testcase name="flagsAreUpdatedAfterEdits()" classname="x.github.module.piecetable.PieceTreeTextBufferApiTest" time="0.0"/>
+  <testcase name="applyEditsWithoutUndoReturnsNoReverseEdits()" classname="x.github.module.piecetable.PieceTreeTextBufferApiTest" time="0.0"/>
+  <testcase name="readPiecesContentMatchesToString()" classname="x.github.module.piecetable.PieceTreeTextBufferApiTest" time="0.001"/>
+  <testcase name="applyEditsMultipleDisjointOperations()" classname="x.github.module.piecetable.PieceTreeTextBufferApiTest" time="0.0"/>
+  <testcase name="applyEditsNormalizesEolOfInsertedText()" classname="x.github.module.piecetable.PieceTreeTextBufferApiTest" time="0.0"/>
+  <testcase name="charSequenceContractForAscii()" classname="x.github.module.piecetable.PieceTreeTextBufferApiTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

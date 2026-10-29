@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="x.github.module.piecetable.PieceTreeSliceTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2026-10-28T06:46:03.112Z" hostname="localhost" time="2.97">
+  <properties/>
+  <testcase name="undoingALargeDeleteCopiesNothing()" classname="x.github.module.piecetable.PieceTreeSliceTest" time="0.026"/>
+  <testcase name="largeRemovedContentIsReportedAsReferences()" classname="x.github.module.piecetable.PieceTreeSliceTest" time="0.002"/>
+  <testcase name="overlappingSliceEditsThrowBeforeAnythingChanges()" classname="x.github.module.piecetable.PieceTreeSliceTest" time="0.001"/>
+  <testcase name="undoRestoresMixedLineBreaksExactly()" classname="x.github.module.piecetable.PieceTreeSliceTest" time="0.829"/>
+  <testcase name="everyChangeSaysWhatItRemoved()" classname="x.github.module.piecetable.PieceTreeSliceTest" time="0.001"/>
+  <testcase name="shortContentIsKeptAsText()" classname="x.github.module.piecetable.PieceTreeSliceTest" time="0.0"/>
+  <testcase name="slicesReferringToAnotherBufferAreRejected()" classname="x.github.module.piecetable.PieceTreeSliceTest" time="0.001"/>
+  <testcase name="undoAfterCompactTakesTheOldStorageBack()" classname="x.github.module.piecetable.PieceTreeSliceTest" time="0.0"/>
+  <testcase name="insertedPiecesJoinANeighbouringCarriageReturnOrLineFeed()" classname="x.github.module.piecetable.PieceTreeSliceTest" time="0.0"/>
+  <testcase name="textSlicesRoundTrip()" classname="x.github.module.piecetable.PieceTreeSliceTest" time="0.474"/>
+  <testcase name="sliceExportedBeforeSetEolIsNormalized()" classname="x.github.module.piecetable.PieceTreeSliceTest" time="0.001"/>
+  <testcase name="changesDescribeTheBatch()" classname="x.github.module.piecetable.PieceTreeSliceTest" time="0.0"/>
+  <testcase name="mixedSlicesRoundTrip()" classname="x.github.module.piecetable.PieceTreeSliceTest" time="0.695"/>
+  <testcase name="referenceSlicesRoundTripAcrossCompactAndSetEol()" classname="x.github.module.piecetable.PieceTreeSliceTest" time="0.926"/>
+  <testcase name="undoOfAnInsertHasNoContent()" classname="x.github.module.piecetable.PieceTreeSliceTest" time="0.001"/>
+  <testcase name="exportSliceDescribesTheRangeAndChangesNothing()" classname="x.github.module.piecetable.PieceTreeSliceTest" time="0.002"/>
+  <testcase name="textSliceIsNormalizedToTheBufferEol()" classname="x.github.module.piecetable.PieceTreeSliceTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

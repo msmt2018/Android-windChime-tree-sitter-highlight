@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="x.github.module.piecetable.PieceTreeStressTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-28T06:46:06.083Z" hostname="localhost" time="1.059">
+  <properties/>
+  <testcase name="applyEditsUndoRoundTrip()" classname="x.github.module.piecetable.PieceTreeStressTest" time="0.02"/>
+  <testcase name="randomEditsKeepLineQueriesConsistent()" classname="x.github.module.piecetable.PieceTreeStressTest" time="0.158"/>
+  <testcase name="randomInsertAndDelete()" classname="x.github.module.piecetable.PieceTreeStressTest" time="0.592"/>
+  <testcase name="randomEditsOnChunkedDocument()" classname="x.github.module.piecetable.PieceTreeStressTest" time="0.174"/>
+  <testcase name="manyEditsOnLargeDocument()" classname="x.github.module.piecetable.PieceTreeStressTest" time="0.031"/>
+  <testcase name="largeDocumentRandomAccess()" classname="x.github.module.piecetable.PieceTreeStressTest" time="0.036"/>
+  <system-out><![CDATA[PieceTreeStress: 2000 edits on a 20k-line document in 18 ms
+PieceTreeStress: build 538890 chars in 3 ms
+PieceTreeStress: 20000 random getLineContent in 16 ms
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="x.github.module.piecetable.RegressionTest" tests="49" skipped="0" failures="0" errors="0" timestamp="2026-10-28T06:46:13.326Z" hostname="localhost" time="0.513">
+  <properties/>
+  <testcase name="rangeBasedQueriesClamp()" classname="x.github.module.piecetable.RegressionTest" time="0.005"/>
+  <testcase name="differentBuffersCanBeEditedOnDifferentThreadsAtTheSameTime()" classname="x.github.module.piecetable.RegressionTest" time="0.053"/>
+  <testcase name="singleHighSurrogateInputIsNotDuplicated()" classname="x.github.module.piecetable.RegressionTest" time="0.001"/>
+  <testcase name="outOfRangeDeleteThrowsInsteadOfHanging()" classname="x.github.module.piecetable.RegressionTest" time="0.002"/>
+  <testcase name="builderRejectsChunksAfterBuild()" classname="x.github.module.piecetable.RegressionTest" time="0.001"/>
+  <testcase name="insertingEmptyStringIsANoop()" classname="x.github.module.piecetable.RegressionTest" time="0.001"/>
+  <testcase name="getLinesContentMatchesGetLineContent()" classname="x.github.module.piecetable.RegressionTest" time="0.001"/>
+  <testcase name="isUnicodePunctuationFollowsTheUnicodeCategories()" classname="x.github.module.piecetable.RegressionTest" time="0.017"/>
+  <testcase name="isBasicAsciiMatchesTheOldRegexBehaviour()" classname="x.github.module.piecetable.RegressionTest" time="0.002"/>
+  <testcase name="bomOnlyInputBuildsEmptyDocument()" classname="x.github.module.piecetable.RegressionTest" time="0.001"/>
+  <testcase name="readsPastTheEndDoNotHang()" classname="x.github.module.piecetable.RegressionTest" time="0.011"/>
+  <testcase name="outOfRangeInsertThrowsInsteadOfHanging()" classname="x.github.module.piecetable.RegressionTest" time="0.003"/>
+  <testcase name="negativeOffsetThrows()" classname="x.github.module.piecetable.RegressionTest" time="0.002"/>
+  <testcase name="staleOrReversedRangesDoNotHang()" classname="x.github.module.piecetable.RegressionTest" time="0.004"/>
+  <testcase name="isAsciiPunctuationIsThePosixSet()" classname="x.github.module.piecetable.RegressionTest" time="0.002"/>
+  <testcase name="staleRangeIsClampedByApplyEdits()" classname="x.github.module.piecetable.RegressionTest" time="0.002"/>
+  <testcase name="getLinesContentOnMixedEol()" classname="x.github.module.piecetable.RegressionTest" time="0.002"/>
+  <testcase name="mixedLineBreaksAreNormalizedByApplyEdits()" classname="x.github.module.piecetable.RegressionTest" time="0.003"/>
+  <testcase name="lineBasedQueriesRejectLinesThatDoNotExist()" classname="x.github.module.piecetable.RegressionTest" time="0.005"/>
+  <testcase name="lineByLineRegexNeverSpansLines()" classname="x.github.module.piecetable.RegressionTest" time="0.007"/>
+  <testcase name="multilineRegexRespectsTheSearchRangeBounds()" classname="x.github.module.piecetable.RegressionTest" time="0.003"/>
+  <testcase name="builderSlicingKeepsCrlfAndSurrogatePairsTogether()" classname="x.github.module.piecetable.RegressionTest" time="0.009"/>
+  <testcase name="builderUsesLfForTextWithoutLineBreaksUnlessCrlfIsRequested()" classname="x.github.module.piecetable.RegressionTest" time="0.0"/>
+  <testcase name="characterCountTreatsSurrogatePairAsOneCharacter()" classname="x.github.module.piecetable.RegressionTest" time="0.001"/>
+  <testcase name="bufferCursorsAreNotSharedAcrossPieces()" classname="x.github.module.piecetable.RegressionTest" time="0.001"/>
+  <testcase name="countEolReportsMixedLineBreaksAsInvalid()" classname="x.github.module.piecetable.RegressionTest" time="0.0"/>
+  <testcase name="walkingFromARemovedNodeFailsInsteadOfHanging()" classname="x.github.module.piecetable.RegressionTest" time="0.006"/>
+  <testcase name="readsOnAnEmptyDocumentDoNotHang()" classname="x.github.module.piecetable.RegressionTest" time="0.006"/>
+  <testcase name="concurrentReadersGetConsistentLinesAndChars()" classname="x.github.module.piecetable.RegressionTest" time="0.292"/>
+  <testcase name="regexAnchorsIgnoreBufferLineBoundaries()" classname="x.github.module.piecetable.RegressionTest" time="0.004"/>
+  <testcase name="wordSearchRespectsColumns()" classname="x.github.module.piecetable.RegressionTest" time="0.003"/>
+  <testcase name="lineLengthIsExactWithoutEolNormalization()" classname="x.github.module.piecetable.RegressionTest" time="0.001"/>
+  <testcase name="toCharsDoesNotInsertSeparators()" classname="x.github.module.piecetable.RegressionTest" time="0.004"/>
+  <testcase name="getLinesContentDoesNotConcatenateMiddleLines()" classname="x.github.module.piecetable.RegressionTest" time="0.001"/>
+  <testcase name="charSequenceGetReturnsUtf16CodeUnits()" classname="x.github.module.piecetable.RegressionTest" time="0.001"/>
+  <testcase name="wordSearchWithEmptyTextFindsNothing()" classname="x.github.module.piecetable.RegressionTest" time="0.003"/>
+  <testcase name="bomIsOnlyStrippedAtTheVeryStart()" classname="x.github.module.piecetable.RegressionTest" time="0.001"/>
+  <testcase name="overlappingRangesThrowIllegalArgumentException()" classname="x.github.module.piecetable.RegressionTest" time="0.001"/>
+  <testcase name="intListBehavesLikeTheListItReplaced()" classname="x.github.module.piecetable.RegressionTest" time="0.001"/>
+  <testcase name="builderSlicesLargeInputIntoBoundedBuffers()" classname="x.github.module.piecetable.RegressionTest" time="0.006"/>
+  <testcase name="builderKeepsEveryHeldBackCharacter()" classname="x.github.module.piecetable.RegressionTest" time="0.001"/>
+  <testcase name="largeInsertKeepsSurrogatePairsIntact()" classname="x.github.module.piecetable.RegressionTest" time="0.001"/>
+  <testcase name="singleCarriageReturnInputIsNotDuplicated()" classname="x.github.module.piecetable.RegressionTest" time="0.001"/>
+  <testcase name="regexAnchorsMatchAtLineBoundaries()" classname="x.github.module.piecetable.RegressionTest" time="0.002"/>
+  <testcase name="recordTrimAutoWhitespaceDoesNotCrash()" classname="x.github.module.piecetable.RegressionTest" time="0.0"/>
+  <testcase name="wordSearchFindsMatchStartingOnTheLastLineOfThePreviousHit()" classname="x.github.module.piecetable.RegressionTest" time="0.0"/>
+  <testcase name="intListAddAllWithDelta()" classname="x.github.module.piecetable.RegressionTest" time="0.0"/>
+  <testcase name="wordSearchMatchesAnyLineBreakKind()" classname="x.github.module.piecetable.RegressionTest" time="0.001"/>
+  <testcase name="subSequenceRejectsInvalidBounds()" classname="x.github.module.piecetable.RegressionTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

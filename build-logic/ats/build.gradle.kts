@@ -52,12 +52,11 @@ java {
     targetCompatibility = JavaVersion.VERSION_17
 }
 
-tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile::class.java).configureEach {
-    this.compilerOptions {
-        this.jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_21)
+tasks.withType<KotlinCompile> {
+    kotlinOptions {
+        jvmTarget = "17"
     }
 }
-
 
 dependencies {
     implementation(gradleApi())

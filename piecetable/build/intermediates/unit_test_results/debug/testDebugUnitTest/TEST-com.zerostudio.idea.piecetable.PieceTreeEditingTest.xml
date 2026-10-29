@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="x.github.module.piecetable.PieceTreeEditingTest" tests="20" skipped="0" failures="0" errors="0" timestamp="2026-10-28T06:46:02.439Z" hostname="localhost" time="0.095">
+  <properties/>
+  <testcase name="equalComparesContentNotStructure()" classname="x.github.module.piecetable.PieceTreeEditingTest" time="0.0"/>
+  <testcase name="insertingBetweenCrAndLfSplitsTheLine()" classname="x.github.module.piecetable.PieceTreeEditingTest" time="0.003"/>
+  <testcase name="insertAndDeleteKeepLineMetadataInSync()" classname="x.github.module.piecetable.PieceTreeEditingTest" time="0.008"/>
+  <testcase name="deletingCrFromCrlfKeepsLineCount()" classname="x.github.module.piecetable.PieceTreeEditingTest" time="0.002"/>
+  <testcase name="lineLengthAndContent()" classname="x.github.module.piecetable.PieceTreeEditingTest" time="0.0"/>
+  <testcase name="insertAtHeadMiddleTail()" classname="x.github.module.piecetable.PieceTreeEditingTest" time="0.001"/>
+  <testcase name="getCharCodeAndLineCharCode()" classname="x.github.module.piecetable.PieceTreeEditingTest" time="0.001"/>
+  <testcase name="snapshotKeepsBom()" classname="x.github.module.piecetable.PieceTreeEditingTest" time="0.001"/>
+  <testcase name="deleteWithZeroOrNegativeCountIsNoop()" classname="x.github.module.piecetable.PieceTreeEditingTest" time="0.001"/>
+  <testcase name="insertingLfAfterCrMergesIntoCrlf()" classname="x.github.module.piecetable.PieceTreeEditingTest" time="0.003"/>
+  <testcase name="setEolRewritesTheWholeDocument()" classname="x.github.module.piecetable.PieceTreeEditingTest" time="0.001"/>
+  <testcase name="deleteHeadTailMiddleAndWholeNode()" classname="x.github.module.piecetable.PieceTreeEditingTest" time="0.001"/>
+  <testcase name="insertTextLargerThanAverageBufferSize()" classname="x.github.module.piecetable.PieceTreeEditingTest" time="0.005"/>
+  <testcase name="offsetAndPositionRoundTrip()" classname="x.github.module.piecetable.PieceTreeEditingTest" time="0.004"/>
+  <testcase name="getNearestChunkReturnsRemainderOfPiece()" classname="x.github.module.piecetable.PieceTreeEditingTest" time="0.003"/>
+  <testcase name="snapshotIsImmutableAgainstLaterEdits()" classname="x.github.module.piecetable.PieceTreeEditingTest" time="0.003"/>
+  <testcase name="getValueInRangeAcrossLinesAndNodes()" classname="x.github.module.piecetable.PieceTreeEditingTest" time="0.002"/>
+  <testcase name="manyLinesDocument()" classname="x.github.module.piecetable.PieceTreeEditingTest" time="0.028"/>
+  <testcase name="deleteAcrossMultipleNodes()" classname="x.github.module.piecetable.PieceTreeEditingTest" time="0.001"/>
+  <testcase name="positionAtKnownOffsets()" classname="x.github.module.piecetable.PieceTreeEditingTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

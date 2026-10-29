@@ -1,20 +1,3 @@
-/*
- *  This file is part of android-tree-sitter.
- *
- *  android-tree-sitter library is free software; you can redistribute it and/or
- *  modify it under the terms of the GNU Lesser General Public
- *  License as published by the Free Software Foundation; either
- *  version 2.1 of the License, or (at your option) any later version.
- *
- *  android-tree-sitter library is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- *  Lesser General Public License for more details.
- *
- *   You should have received a copy of the GNU General Public License
- *  along with android-tree-sitter.  If not, see <https://www.gnu.org/licenses/>.
- */
-
 @file:Suppress("UnstableApiUsage")
 
 import com.android.build.gradle.BaseExtension
@@ -24,16 +7,19 @@ import org.gradle.api.publish.PublishingExtension
 import org.gradle.api.publish.maven.MavenPublication
 import com.zerostudio.idea.treesitter.CleanTreeSitterBuildTask
 import com.zerostudio.idea.treesitter.projectVersionCode
+// 🔹 导入签名扩展
+import org.gradle.plugins.signing.SigningExtension
 
-
-// @Suppress("DSL_SCOPE_VIOLATION") 
-plugins {
-  id("build-logic.root-project")
-  alias(libs.plugins.android.application) apply false
-  alias(libs.plugins.android.library) apply false
-  alias(libs.plugins.kotlin) apply false
+buildscript {
+  dependencies {
+    classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.22")
+  }
 }
 
+@Suppress("DSL_SCOPE_VIOLATION") plugins {
+  id("build-logic.root-project")
+  alias(libs.plugins.kotlin) apply false
+}
 
 // Android uses the leading 'v'; Maven publications remove it.
 val releaseVersion = providers.gradleProperty("releaseVersion").orElse("1.0.0")
@@ -114,9 +100,7 @@ subprojects {
   )
 
   if (name in githubPackageModules) {
-    group = providers.gradleProperty("gpr.group")
-      .orElse("com.huiywu.androidcs.treesitter")
-      .get()
+    group = "io.github.msmt2018"
     version = rootProject.version.toString().removePrefix("v")
 
     plugins.withId("com.android.library") {
@@ -124,12 +108,25 @@ subprojects {
         publishing {
           singleVariant("release") {
             withSourcesJar()
+            // 🔹 补全中央仓库强制要求的 Javadoc（生成空包或标准包均可，中央仓库强制校验其存在）
+            withJavadocJar()
           }
         }
       }
     }
 
+    // java-library 模块（如 annotations）也需要显式补全源码和文档生成
+    plugins.withId("java-library") {
+      extensions.configure<JavaPluginExtension> {
+        withSourcesJar()
+        withJavadocJar()
+      }
+    }
+
     plugins.withId("maven-publish") {
+      // 🔹 引入并配置中央仓库必须的 GPG 签名插件
+      apply(plugin = "signing")
+
       afterEvaluate {
         extensions.configure<PublishingExtension> {
           publications {
@@ -144,8 +141,8 @@ subprojects {
                 url.set("https://github.com/${githubPackagesOwner()}/${githubPackagesRepository()}")
                 licenses {
                   license {
-                    name.set("GNU Lesser General Public License v2.1")
-                    url.set("https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html")
+                    name.set("GNU Lesser General Public License v3.0")
+                    url.set("https://www.gnu.org/licenses/gpl-3.0.html#license-text")
                     distribution.set("repo")
                   }
                 }
@@ -158,18 +155,25 @@ subprojects {
           }
 
           repositories {
+            // 🔹 将原本推送到 GitHub 的目标替换为新版中央仓库 Portal 的发布 API 入口
             maven {
-              name = "GitHubPackages"
-              url = uri("https://maven.pkg.github.com/${githubPackagesOwner()}/${githubPackagesRepository()}")
+              name = "MavenCentral"
+              url = uri("https://sonatype.com")
               credentials {
-                username = providers.gradleProperty("gpr.user")
-                  .orElse(providers.environmentVariable("GITHUB_ACTOR"))
-                  .orNull
-                password = providers.gradleProperty("gpr.token")
-                  .orElse(providers.environmentVariable("GITHUB_TOKEN"))
-                  .orNull
+                username = providers.environmentVariable("MAVEN_USERNAME").orNull
+                password = providers.environmentVariable("MAVEN_PASSWORD").orNull
               }
             }
+          }
+        }
+
+        // 🔹 配置自动读取环境变量中的 GPG 私钥并对当前 release publication 执行签名
+        extensions.configure<SigningExtension> {
+          val signingKey = providers.environmentVariable("GPG_SIGNING_KEY").orNull
+          val signingPassword = providers.environmentVariable("GPG_PASSWORD").orNull
+          if (signingKey != null && signingPassword != null) {
+            useInMemoryPgpKeys(signingKey, signingPassword)
+            sign(extensions.getByType<PublishingExtension>().publications["release"])
           }
         }
       }
@@ -198,7 +202,7 @@ fun Project.configureTsModule() {
       logger.lifecycle("Set namespace '$namespace' to $project")
     }
 
-    ndkVersion = "29.0.14206865"
+    ndkVersion = "24.0.8215888"
 
     defaultConfig {
       val rootProjDir = project.rootProject.projectDir.absolutePath

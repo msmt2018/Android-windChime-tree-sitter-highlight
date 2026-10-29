@@ -1,0 +1,9 @@
+x.github.module.piecetable-pngs-0 /root/xedit-app/piecetable/build/generated/res/pngs/release
+x.github.module.piecetable-updated_navigation_xml-1 /root/xedit-app/piecetable/build/generated/updated_navigation_xml/release
+x.github.module.piecetable-mergeReleaseResources-2 /root/xedit-app/piecetable/build/intermediates/incremental/release/mergeReleaseResources/merged.dir
+x.github.module.piecetable-mergeReleaseResources-3 /root/xedit-app/piecetable/build/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+x.github.module.piecetable-release-4 /root/xedit-app/piecetable/build/intermediates/merged_res/release/mergeReleaseResources
+x.github.module.piecetable-release-5 /root/xedit-app/piecetable/build/intermediates/packaged_res/release/packageReleaseResources
+x.github.module.piecetable-main-6 /root/xedit-app/piecetable/src/main/res
+x.github.module.piecetable-release-7 /root/xedit-app/piecetable/src/release/res
+gradleHome-0 /root/.gradle

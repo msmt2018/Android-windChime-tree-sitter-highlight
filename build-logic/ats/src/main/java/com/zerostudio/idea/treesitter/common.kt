@@ -19,13 +19,11 @@ package com.zerostudio.idea.treesitter
 
 import org.gradle.api.GradleException
 import org.gradle.api.Project
-import org.gradle.process.ExecOperations
-import org.gradle.process.ExecResult
-import java.io.File
+import org.gradle.kotlin.dsl.provideDelegate
+import java.io.ByteArrayOutputStream
 
 /**
  * @author Akash Yadav
- * @author android_zero（github:msmt2018）已升级适配 Gradle 9.8 + AGP 9.4+
  */
 
 const val ENV_TS_CLI_BUILD_FROM_SOURCE = "TS_CLI_BUILD_FROM_SOURCE"
@@ -35,24 +33,11 @@ val BUILD_TS_CLI_FROM_SOURCE by lazy {
 }
 
 fun Project.executeCommand(workingDir: String, vararg command: String) {
-  val result: ExecResult = project.providers.exec {
-    this.workingDir = File(workingDir)
-    this.commandLine(*command)
-    this.standardOutput = System.out
-    this.errorOutput = System.err
-  }.result.get()
-
-  if (result.exitValue != 0) {
-    throw GradleException("Failed to execute '${command.joinToString(" ")}'")
-  }
-}
-
-fun ExecOperations.executeCommand(workingDir: String, vararg command: String) {
-  val result: ExecResult = this.exec {
-    this.workingDir = File(workingDir)
-    this.commandLine(*command)
-    this.standardOutput = System.out
-    this.errorOutput = System.err
+  val result = exec {
+    workingDir(workingDir)
+    commandLine(*command)
+    standardOutput = System.out
+    errorOutput = System.err
   }
 
   if (result.exitValue != 0) {
