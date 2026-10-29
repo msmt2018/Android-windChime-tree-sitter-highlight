@@ -9,7 +9,7 @@
     android:largeHeap="true"
     android:theme="@style/Theme.AndroidTreeSitter">
     <activity
-      android:name="com.itsaky.androidide.androidtreesitter.MainActivity"
+      android:name="com.zerostudio.idea.androidtreesitter.MainActivity"
       android:exported="true"
       android:theme="@style/Theme.AndroidTreeSitter"
       android:windowSoftInputMode="adjustResize">

@@ -1,4 +1,4 @@
-package com.itsaky.androidide.treesitter.test;
+package com.zerostudio.idea.treesitter.test;
 
 @SomeMarker
 @Something(withParam1 = "value", withParam2 = "value")

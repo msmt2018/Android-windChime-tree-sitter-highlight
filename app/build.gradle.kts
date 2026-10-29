@@ -22,11 +22,11 @@ plugins {
 }
 
 android {
-    namespace = "com.itsaky.androidide.androidtreesitter"
+    namespace = "com.zerostudio.idea.androidtreesitter"
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "com.itsaky.androidide.androidtreesitter"
+        applicationId = "com.zerostudio.idea.androidtreesitter"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 

@@ -19,22 +19,21 @@
 
 import com.android.build.gradle.BaseExtension
 import com.android.build.gradle.LibraryExtension
-import com.itsaky.androidide.treesitter.BuildTreeSitterTask
+import com.zerostudio.idea.treesitter.BuildTreeSitterTask
 import org.gradle.api.publish.PublishingExtension
 import org.gradle.api.publish.maven.MavenPublication
-import com.itsaky.androidide.treesitter.CleanTreeSitterBuildTask
-import com.itsaky.androidide.treesitter.projectVersionCode
+import com.zerostudio.idea.treesitter.CleanTreeSitterBuildTask
+import com.zerostudio.idea.treesitter.projectVersionCode
 
-buildscript {
-  dependencies {
-    classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.22")
-  }
-}
 
-@Suppress("DSL_SCOPE_VIOLATION") plugins {
+// @Suppress("DSL_SCOPE_VIOLATION") 
+plugins {
   id("build-logic.root-project")
+  alias(libs.plugins.android.application) apply false
+  alias(libs.plugins.android.library) apply false
   alias(libs.plugins.kotlin) apply false
 }
+
 
 // Android uses the leading 'v'; Maven publications remove it.
 val releaseVersion = providers.gradleProperty("releaseVersion").orElse("1.0.0")
@@ -195,11 +194,11 @@ fun Project.configureTsModule() {
     
     val grammarName = project.project.name.substringAfter("tree-sitter-", "")
     if (grammarName.isNotBlank()) {
-      namespace = "com.itsaky.androidide.treesitter.$grammarName"
+      namespace = "com.zerostudio.idea.treesitter.$grammarName"
       logger.lifecycle("Set namespace '$namespace' to $project")
     }
 
-    ndkVersion = "24.0.8215888"
+    ndkVersion = "29.0.14206865"
 
     defaultConfig {
       val rootProjDir = project.rootProject.projectDir.absolutePath

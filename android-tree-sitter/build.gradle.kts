@@ -24,7 +24,7 @@ plugins {
 description = "Android Java bindings for Tree Sitter."
 
 android {
-  namespace = "com.itsaky.androidide.treesitter"
+  namespace = "com.zerostudio.idea.treesitter"
 }
 
 dependencies {
