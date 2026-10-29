@@ -10,6 +10,12 @@
     ]
   },
   {
+    "name": "csharp",
+    "src.extra": [
+      "src/scanner.c"
+    ]
+  },
+  {
     "name": "groovy",
     "src.extra": [
       "src/scanner.c"

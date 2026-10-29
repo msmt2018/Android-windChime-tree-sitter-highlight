@@ -11,11 +11,11 @@ and [sora-editor](https://github.com/Rosemoe/sora-editor).
 
 ```gradle
 // main library
-implementation 'com.zerostudio.idea.treesitter:android-tree-sitter:<version>'
+implementation 'io.github.msmt2018:android-tree-sitter:<version>'
 
 // grammar libraries
 // <language> is the name of the language grammar. e.g. 'java', 'python', 'xml', etc.
-implementation 'com.zerostudio.idea.treesitter:tree-sitter-<language>:<version>'
+implementation 'io.github.msmt2018:tree-sitter-<language>:<version>'
 ```
 
 Before using tree sitter, load the native library when appropriate (e.g. in the `onCreate()` method of your `Application` class, or in your activity) :

@@ -127,6 +127,9 @@ class MainActivity : AppCompatActivity() {
     content.tsMeta.text =
       "Tree Sitter Language Version: " + TreeSitter.getLanguageVersion()
 
+    String displayVersion = "Tree Sitter Version : " + TreeSitter.getEngineVersion();
+    binding.tsVersion.setText(displayVersion);
+
     loadLanguages()
 
     // new String(byte[], String) is not supported on Android)

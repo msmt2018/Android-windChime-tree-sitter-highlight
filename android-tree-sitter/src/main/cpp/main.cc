@@ -16,11 +16,19 @@
  */
 
 #include <jni.h>
+#include <string>
 
 #include "utils/ts_obj_utils.h"
 #include "ts__log.h"
 
 #include "ts__onload.h"
+
+//Manually maintain the core version of the treesitter engine
+//Check the core version information of the treesitter engine you are currently pulling:https://github.com/tree-sitter/tree-sitter/blob/master/Cargo.toml
+// Cargo.toml --> [workspace.package] --> version = "x.xx.x"
+#define TS_VERSION_NUM   "0.28.0"
+//Manually maintain the current git commit hash value during pull
+#define TS_GIT_HASH      "ad067fd"
 
 #if defined(__ANDROID__)
 static jint JNI_VERSION = JNI_VERSION_1_6;
@@ -53,3 +61,15 @@ JNIEXPORT void JNI_OnUnload(JavaVM *vm, void *reserved) {
 
   onUnload(env);
 }
+
+
+extern "C" {
+JNIEXPORT jstring JNICALL
+Java_com_zerostudio_idea_treesitter_TreeSitter_00024Native_getEngineVersion(JNIEnv *env, jobject /* thiz */) {
+    // 使用 std::string 动态连接格式：Vxx.xx-hasa (例如: V0.28.0-a1b2c3d)
+    std::string version_str = "V" TS_VERSION_NUM "-" TS_GIT_HASH;
+
+    // 将 C++ 字符串转换为 Java 能够识别的 UTF-8 jstring 并返回
+    return env->NewStringUTF(version_str.c_str());
+}
+} // extern "C"
