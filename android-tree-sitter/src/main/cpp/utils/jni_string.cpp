@@ -88,7 +88,7 @@ jstring FNI_NewString(JNIEnv *env, const jbyte *bytes, int len) {
 
 jstring FNI_NewAndroidString(JNIEnv *env, const jbyte *bytes, int len) {
     jstring result;
-    jclass strcls = env->FindClass("com.zerostudio.idea/treesitter/string/StringDecoder");
+    jclass strcls = env->FindClass("com/zerostudio/idea/treesitter/string/StringDecoder");
     jmethodID newStr = env->GetStaticMethodID(strcls, "fromBytes", "([B)Ljava/lang/String;");
     jbyteArray ba = env->NewByteArray(len);
     env->SetByteArrayRegion(ba, 0, len, bytes);

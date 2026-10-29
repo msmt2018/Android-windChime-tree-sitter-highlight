@@ -35,7 +35,7 @@
 extern "C" {
 #endif
 
-#define PACKAGE "com.zerostudio.idea/treesitter/"
+#define PACKAGE "com/zerostudio/idea/treesitter/"
 
 #define TAG "JNI_NATIVE_LOG"
 

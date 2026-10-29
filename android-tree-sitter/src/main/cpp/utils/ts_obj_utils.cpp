@@ -91,60 +91,60 @@ static jmethodID factory_createQueryPredicateStepArr;
 void onLoad(JNIEnv *env) {
 
   _loadClass(objectFactoryClass,
-             "com.zerostudio.idea/treesitter/internal/NativeObjectFactory")
+             "com/zerostudio/idea/treesitter/internal/NativeObjectFactory")
 
   _loadStaticMethod(factory_createNode,
                     objectFactoryClass,
                     "createNode",
-                    "(IIIIJJ)Lcom.zerostudio.idea/treesitter/TSNode;")
+                    "(IIIIJJ)Lcom/zerostudio/idea/treesitter/TSNode;")
 
   _loadStaticMethod(factory_createTreeCursorNode,
                     objectFactoryClass,
                     "createTreeCursorNode",
-                    "(Ljava/lang/String;Ljava/lang/String;II)Lcom.zerostudio.idea/treesitter/TSTreeCursorNode;")
+                    "(Ljava/lang/String;Ljava/lang/String;II)Lcom/zerostudio/idea/treesitter/TSTreeCursorNode;")
 
   _loadStaticMethod(factory_createPoint,
                     objectFactoryClass,
                     "createPoint",
-                    "(II)Lcom.zerostudio.idea/treesitter/TSPoint;")
+                    "(II)Lcom/zerostudio/idea/treesitter/TSPoint;")
 
   _loadStaticMethod(factory_createRange,
                     objectFactoryClass,
                     "createRange",
-                    "(IIIIII)Lcom.zerostudio.idea/treesitter/TSRange;")
+                    "(IIIIII)Lcom/zerostudio/idea/treesitter/TSRange;")
 
   _loadStaticMethod(factory_createRangeArr,
                     objectFactoryClass,
                     "createRangeArr",
-                    "(I)[Lcom.zerostudio.idea/treesitter/TSRange;")
+                    "(I)[Lcom/zerostudio/idea/treesitter/TSRange;")
 
   _loadStaticMethod(factory_createInputEdit,
                     objectFactoryClass,
                     "createInputEdit",
-                    "(IIIIIIIII)Lcom.zerostudio.idea/treesitter/TSInputEdit;")
+                    "(IIIIIIIII)Lcom/zerostudio/idea/treesitter/TSInputEdit;")
 
   _loadStaticMethod(factory_createQueryMatch,
                     objectFactoryClass,
                     "createQueryMatch",
-                    "(II[Lcom.zerostudio.idea/treesitter/TSQueryCapture;)Lcom.zerostudio.idea/treesitter/TSQueryMatch;")
+                    "(II[Lcom/zerostudio/idea/treesitter/TSQueryCapture;)Lcom/zerostudio/idea/treesitter/TSQueryMatch;")
 
   _loadStaticMethod(factory_createQueryCapture,
                     objectFactoryClass,
                     "createQueryCapture",
-                    "(IIIIIJJ)Lcom.zerostudio.idea/treesitter/TSQueryCapture;")
+                    "(IIIIIJJ)Lcom/zerostudio/idea/treesitter/TSQueryCapture;")
 
   _loadStaticMethod(factory_createQueryPredicateStep,
                     objectFactoryClass,
                     "createQueryPredicateStep",
-                    "(II)Lcom.zerostudio.idea/treesitter/TSQueryPredicateStep;")
+                    "(II)Lcom/zerostudio/idea/treesitter/TSQueryPredicateStep;")
 
   _loadStaticMethod(factory_createQueryPredicateStepArr,
                     objectFactoryClass,
                     "createQueryPredicateStepArr",
-                    "(I)[Lcom.zerostudio.idea/treesitter/TSQueryPredicateStep;")
+                    "(I)[Lcom/zerostudio/idea/treesitter/TSQueryPredicateStep;")
 
   // Node
-  _loadClass(nodeClass, "com.zerostudio.idea/treesitter/TSNode")
+  _loadClass(nodeClass, "com/zerostudio/idea/treesitter/TSNode")
   _loadField(nodeContext0Field, nodeClass, "context0", "I")
   _loadField(nodeContext1Field, nodeClass, "context1", "I")
   _loadField(nodeContext2Field, nodeClass, "context2", "I")
@@ -154,7 +154,7 @@ void onLoad(JNIEnv *env) {
 
   // TreeCursorNode
   _loadClass(treeCursorNodeClass,
-             "com.zerostudio.idea/treesitter/TSTreeCursorNode")
+             "com/zerostudio/idea/treesitter/TSTreeCursorNode")
   _loadField(treeCursorNodeTypeField, treeCursorNodeClass, "type",
              "Ljava/lang/String;")
   _loadField(treeCursorNodeNameField, treeCursorNodeClass, "name",
@@ -164,47 +164,47 @@ void onLoad(JNIEnv *env) {
   _loadField(treeCursorNodeEndByteField, treeCursorNodeClass, "endByte", "I")
 
   // TSPoint
-  _loadClass(pointClass, "com.zerostudio.idea/treesitter/TSPoint")
+  _loadClass(pointClass, "com/zerostudio/idea/treesitter/TSPoint")
   _loadField(pointRowField, pointClass, "row", "I")
   _loadField(pointColumnField, pointClass, "column", "I")
 
   // TSRange
-  _loadClass(rangeClass, "com.zerostudio.idea/treesitter/TSRange")
+  _loadClass(rangeClass, "com/zerostudio/idea/treesitter/TSRange")
   _loadField(rangeClassStartByteField, rangeClass, "startByte", "I")
   _loadField(rangeClassEndByteField, rangeClass, "endByte", "I")
   _loadField(rangeClassStartPointField, rangeClass, "startPoint",
-             "Lcom.zerostudio.idea/treesitter/TSPoint;")
+             "Lcom/zerostudio/idea/treesitter/TSPoint;")
   _loadField(rangeClassEndPointField, rangeClass, "endPoint",
-             "Lcom.zerostudio.idea/treesitter/TSPoint;")
+             "Lcom/zerostudio/idea/treesitter/TSPoint;")
 
   // TSInputEdit
-  _loadClass(inputEditClass, "com.zerostudio.idea/treesitter/TSInputEdit")
+  _loadClass(inputEditClass, "com/zerostudio/idea/treesitter/TSInputEdit")
   _loadField(inputEditStartByteField, inputEditClass, "startByte", "I")
   _loadField(inputEditOldEndByteField, inputEditClass, "oldEndByte", "I")
   _loadField(inputEditNewEndByteField, inputEditClass, "newEndByte", "I")
   _loadField(inputEditStartPointField, inputEditClass, "startPoint",
-             "Lcom.zerostudio.idea/treesitter/TSPoint;")
+             "Lcom/zerostudio/idea/treesitter/TSPoint;")
   _loadField(inputEditOldEndPointField, inputEditClass, "oldEndPoint",
-             "Lcom.zerostudio.idea/treesitter/TSPoint;")
+             "Lcom/zerostudio/idea/treesitter/TSPoint;")
   _loadField(inputEditNewEndPointField, inputEditClass, "newEndPoint",
-             "Lcom.zerostudio.idea/treesitter/TSPoint;")
+             "Lcom/zerostudio/idea/treesitter/TSPoint;")
 
   // TSQueryMatch
-  _loadClass(matchClass, "com.zerostudio.idea/treesitter/TSQueryMatch")
+  _loadClass(matchClass, "com/zerostudio/idea/treesitter/TSQueryMatch")
   _loadField(matchClassIdField, matchClass, "id", "I")
   _loadField(matchClassPatternIndexField, matchClass, "patternIndex", "I")
   _loadField(matchClassCapturesField, matchClass, "captures",
-             "[Lcom.zerostudio.idea/treesitter/TSQueryCapture;")
+             "[Lcom/zerostudio/idea/treesitter/TSQueryCapture;")
 
   // TSQueryCapture
-  _loadClass(captureClass, "com.zerostudio.idea/treesitter/TSQueryCapture")
+  _loadClass(captureClass, "com/zerostudio/idea/treesitter/TSQueryCapture")
   _loadField(captureClassIndexField, captureClass, "index", "I")
   _loadField(captureClassNodeField, captureClass, "node",
-             "Lcom.zerostudio.idea/treesitter/TSNode;")
+             "Lcom/zerostudio/idea/treesitter/TSNode;")
 
   // TSQueryPredicateStep
   _loadClass(queryPredicateStepClass,
-             "com.zerostudio.idea/treesitter/TSQueryPredicateStep")
+             "com/zerostudio/idea/treesitter/TSQueryPredicateStep")
   _loadField(queryPredicateStepTypeField, queryPredicateStepClass, "type",
              "I")
   _loadField(queryPredicateStepValueIdField, queryPredicateStepClass,
