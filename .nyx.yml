@@ -1,0 +1,73 @@
+preset: simple
+releaseLenient: false
+releasePrefix: "v"
+stateFile: build/nyx-state.json
+scheme: SEMVER
+
+changelog:
+  path: build/CHANGELOG.md
+  template: .nyx/CHANGELOG.tpl
+  sections:
+    Added: "^feat$"
+    Fixed: "^fix$"
+  substitutions:
+    "(?m)#([0-9]+)(?s)": "[#%s](https://github.com/AndroidIDEOfficial/android-tree-sitter/issues/%s)"
+
+releaseAssets:
+  apk:
+    fileName: "android-tree-sitter-{{version}}-sample-app"
+    description: "Sample Android application for android-tree-sitter {{version}}"
+    path: app/build/outputs/apk/release/app-release.apk
+    type: application/octet-stream
+  debug_syms:
+    fileName: "shared-library-debug-symbols"
+    description: "Debug symbols (debug_info) for shared libraries (.so)"
+    path: artifacts/debug-symbols.zip
+    type: application/zip
+
+releaseTypes:
+  enabled:
+    - mainline
+    - internal
+  publicationServices:
+    - github
+  remoteRepositories:
+    - origin
+  items:
+    mainline:
+      description: "{{#fileContent}}build/CHANGELOG.md{{/fileContent}}"
+      gitPush: true
+      gitTag: true
+      publish: true
+      matchBranches: "^(master|main)$"
+      matchEnvironmentVariables:
+        CI: "^true$"
+        PublishToMaven: "^true$"
+    internal:
+      description: "{{#fileContent}}build/CHANGELOG.md{{/fileContent}}"
+      collapseVersions: true
+      collapsedVersionQualifier: "internal"
+      gitPush: false
+      gitTag: false
+      publish: false
+      identifiers:
+        -
+          qualifier: "branch"
+          value: "{{#sanitizeLower}}{{branch}}{{/sanitizeLower}}"
+          position: "BUILD"
+        -
+          qualifier: "commit"
+          value: "{{#short7}}{{releaseScope.finalCommit}}{{/short7}}"
+          position: "BUILD"
+        - 
+          qualifier: "timestamp"
+          value: "{{#timestampYYYYMMDDHHMMSS}}{{timestamp}}{{/timestampYYYYMMDDHHMMSS}}"
+          position: "BUILD"
+
+services:
+    github:
+      type: GITHUB
+      options:
+        REPOSITORY_OWNER: "AndroidIDEOfficial"
+        REPOSITORY_NAME: "android-tree-sitter"
+        AUTHENTICATION_TOKEN: "{{#environmentVariable}}GH_TOKEN{{/environmentVariable}}"

@@ -7,7 +7,6 @@ import org.gradle.api.publish.PublishingExtension
 import org.gradle.api.publish.maven.MavenPublication
 import com.zerostudio.idea.treesitter.CleanTreeSitterBuildTask
 import com.zerostudio.idea.treesitter.projectVersionCode
-// 🔹 导入签名扩展
 import org.gradle.plugins.signing.SigningExtension
 
 buildscript {
