@@ -1,9 +1,3 @@
-[submodule "tree-sitter"]
-	path = tree-sitter-lib
-	url = https://github.com/tree-sitter/tree-sitter.git
-[submodule "grammars/java"]
-	path = grammars/java
-	url = https://github.com/AndroidIDEOfficial/tree-sitter-java.git
 [submodule "grammars/json"]
 	path = grammars/json
 	url = https://github.com/tree-sitter/tree-sitter-json.git
@@ -13,35 +7,36 @@
 [submodule "grammars/log"]
 	path = grammars/log
 	url = https://github.com/AndroidIDEOfficial/tree-sitter-log
-[submodule "grammars/python"]
-	path = grammars/python
-	url = https://github.com/tree-sitter/tree-sitter-python.git
 [submodule "grammars/xml"]
 	path = grammars/xml
 	url = https://github.com/AndroidIDEOfficial/tree-sitter-xml
-[submodule "grammars/aidl"]
-	path = grammars/aidl
-	url = https://github.com/AndroidIDEOfficial/tree-sitter-aidl
+[submodule "grammars/irules"]
+	path = grammars/irules
+	url = https://github.com/dekobon/tree-sitter-irules
 [submodule "grammars/properties"]
 	path = grammars/properties
 	url = https://github.com/AndroidIDEOfficial/tree-sitter-properties
 [submodule "grammars/c"]
 	path = grammars/c
 	url = https://github.com/tree-sitter/tree-sitter-c
-[submodule "grammars/cpp"]
-	path = grammars/cpp
-	url = https://github.com/tree-sitter/tree-sitter-cpp
-	
-		
-[submodule "grammars/irules"]
- path = grammars/irules
- url = https://github.com/dekobon/tree-sitter-irules
-
-	
-[submodule "grammars/csharp"]
-	path = grammars/csharp
-	url = https://github.com/tree-sitter/tree-sitter-c-sharp
-	
 [submodule "grammars/groovy"]
 	path = grammars/groovy
 	url = https://github.com/dekobon/tree-sitter-groovy
+[submodule "tree-sitter-lib"]
+	path = tree-sitter-lib
+	url = https://github.com/tree-sitter/tree-sitter.git
+[submodule "grammars/java"]
+	path = grammars/java
+	url = https://github.com/AndroidIDEOfficial/tree-sitter-java.git
+[submodule "grammars/aidl"]
+	path = grammars/aidl
+	url = https://github.com/AndroidIDEOfficial/tree-sitter-aidl
+[submodule "grammars/csharp"]
+	path = grammars/csharp
+	url = https://github.com/tree-sitter/tree-sitter-c-sharp
+[submodule "grammars/python"]
+	path = grammars/python
+	url = https://github.com/tree-sitter/tree-sitter-python.git
+[submodule "grammars/cpp"]
+	path = grammars/cpp
+	url = https://github.com/tree-sitter/tree-sitter-cpp
