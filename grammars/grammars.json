@@ -1,13 +1,17 @@
 [
   {
-    "name": "c",
+    "name": "aidl",
     "src.extra": []
   },
   {
-    "name": "cpp",
+    "name": "bash",
     "src.extra": [
       "src/scanner.c"
     ]
+  },
+  {
+    "name": "c",
+    "src.extra": []
   },
   {
     "name": "c_sharp",
@@ -16,7 +20,83 @@
     ]
   },
   {
+    "name": "clojure",
+    "src.extra": []
+  },
+  {
+    "name": "cmake",
+    "src.extra": [
+      "src/scanner.c"
+    ]
+  },
+  {
+    "name": "containerfile",
+    "src.extra": [
+      "src/scanner.c"
+    ]
+  },
+  {
+    "name": "cpp",
+    "src.extra": [
+      "src/scanner.c"
+    ]
+  },
+  {
+    "name": "css",
+    "src.extra": [
+      "src/scanner.c"
+    ]
+  },
+  {
+    "name": "diff",
+    "src.extra": []
+  },
+  {
+    "name": "dockerfile",
+    "src.extra": [
+      "src/scanner.c"
+    ]
+  },
+  {
+    "name": "elixir",
+    "src.extra": [
+      "src/scanner.c"
+    ]
+  },
+  {
+    "name": "elm",
+    "src.extra": [
+      "src/scanner.c"
+    ]
+  },
+  {
+    "name": "go",
+    "src.extra": []
+  },
+  {
+    "name": "gomod",
+    "src.extra": []
+  },
+  {
     "name": "groovy",
+    "src.extra": [
+      "src/scanner.c"
+    ]
+  },
+  {
+    "name": "haskell",
+    "src.extra": [
+      "src/scanner.c"
+    ]
+  },
+  {
+    "name": "hcl",
+    "src.extra": [
+      "src/scanner.c"
+    ]
+  },
+  {
+    "name": "html",
     "src.extra": [
       "src/scanner.c"
     ]
@@ -28,16 +108,30 @@
     ]
   },
   {
-    "name": "aidl",
-    "src.extra": []
-  },
-  {
     "name": "java",
     "src.extra": []
   },
   {
+    "name": "javascript",
+    "src.extra": [
+      "src/scanner.c"
+    ]
+  },
+  {
+    "name": "jsdoc",
+    "src.extra": [
+      "src/scanner.c"
+    ]
+  },
+  {
     "name": "json",
     "src.extra": []
+  },
+  {
+    "name": "julia",
+    "src.extra": [
+      "src/scanner.c"
+    ]
   },
   {
     "name": "kotlin",
@@ -46,8 +140,32 @@
     ]
   },
   {
+    "name": "latex",
+    "src.extra": [
+      "src/scanner.c"
+    ]
+  },
+  {
     "name": "log",
     "src.extra": []
+  },
+  {
+    "name": "lua",
+    "src.extra": [
+      "src/scanner.c"
+    ]
+  },
+  {
+    "name": "perl",
+    "src.extra": [
+      "src/scanner.c"
+    ]
+  },
+  {
+    "name": "pkl",
+    "src.extra": [
+      "src/scanner.c"
+    ]
   },
   {
     "name": "properties",
@@ -60,7 +178,71 @@
     ]
   },
   {
+    "name": "query",
+    "src.extra": []
+  },
+  {
+    "name": "ruby",
+    "src.extra": [
+      "src/scanner.c"
+    ]
+  },
+  {
+    "name": "scala",
+    "src.extra": [
+      "src/scanner.c"
+    ]
+  },
+  {
+    "name": "scss",
+    "src.extra": [
+      "src/scanner.c"
+    ]
+  },
+  {
+    "name": "smali",
+    "src.extra": [
+      "src/scanner.c"
+    ]
+  },
+  {
+    "name": "sql",
+    "src.extra": [
+      "src/scanner.c"
+    ]
+  },
+  {
+    "name": "ssh",
+    "src.extra": []
+  },
+  {
+    "name": "swift",
+    "src.extra": [
+      "src/scanner.c"
+    ]
+  },
+  {
+    "name": "toml",
+    "src.extra": [
+      "src/scanner.c"
+    ]
+  },
+  {
+    "name": "verilog",
+    "src.extra": []
+  },
+  {
     "name": "xml",
+    "src.extra": []
+  },
+  {
+    "name": "yaml",
+    "src.extra": [
+      "src/scanner.c"
+    ]
+  },
+  {
+    "name": "zig",
     "src.extra": []
   }
 ]
