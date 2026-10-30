@@ -31,8 +31,8 @@
 [submodule "grammars/aidl"]
 	path = grammars/aidl
 	url = https://github.com/AndroidIDEOfficial/tree-sitter-aidl
-[submodule "grammars/csharp"]
-	path = grammars/csharp
+[submodule "grammars/c_sharp"]
+	path = grammars/c_sharp
 	url = https://github.com/tree-sitter/tree-sitter-c-sharp
 [submodule "grammars/python"]
 	path = grammars/python

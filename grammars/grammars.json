@@ -10,7 +10,7 @@
     ]
   },
   {
-    "name": "csharp",
+    "name": "c_sharp",
     "src.extra": [
       "src/scanner.c"
     ]
