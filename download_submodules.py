@@ -5,7 +5,7 @@ import shutil
 import subprocess
 
 # 默认克隆镜像前缀（例如 "https://ghproxy.net" ），留空则直连 https://github.com
-MIRROR_PREFIX = ""
+MIRROR_PREFIX = "https://v4.gh-proxy.org/"
 
 def parse_gitmodules(file_path):
     """解析 .gitmodules 文件，提取 path 和 url"""
