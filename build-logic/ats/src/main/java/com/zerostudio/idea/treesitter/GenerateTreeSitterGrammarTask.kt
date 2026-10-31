@@ -20,23 +20,39 @@ package com.zerostudio.idea.treesitter
 import org.gradle.api.DefaultTask
 import org.gradle.api.logging.LogLevel.LIFECYCLE
 import org.gradle.api.tasks.TaskAction
+import java.io.File
 
 /**
  * @author Akash Yadav
+ * @author android_zero <github.com/msmt2018> [update] : On October 31, 2026, upgraded to support composite multi-parser source generation across sub-paths.
  */
 abstract class GenerateTreeSitterGrammarTask : DefaultTask() {
 
   @TaskAction
   fun generateGrammar() {
     val langName = project.name.substringAfterLast('-')
+    val grammars = project.readGrammars()
+    val grammar = grammars.find { it.name == langName }
+      ?: throw IllegalStateException("Grammar '$langName' definition not found in grammars.json")
 
-    val grammarDir = project.rootProject.file("grammars/$langName").absolutePath
     var tsCmd = project.rootProject.file("tree-sitter-lib/cli/build/release/tree-sitter").absolutePath
     if (!BUILD_TS_CLI_FROM_SOURCE) {
       tsCmd = "tree-sitter"
     }
 
-    project.logger.log(LIFECYCLE, "Using '$tsCmd' to generate '${project.name}' grammar")
-    project.executeCommand(grammarDir, tsCmd, "generate")
+    if (!grammar.composite) {
+      val grammarDir = project.rootProject.file("grammars/$langName").absolutePath
+      project.logger.log(LIFECYCLE, "Using '$tsCmd' to generate single grammar '${project.name}'")
+      project.executeCommand(grammarDir, tsCmd, "generate")
+    } else {
+      project.logger.log(LIFECYCLE, "Using '$tsCmd' to generate composite grammars for '${project.name}'")
+      
+      val grammarRootDir = project.rootProject.file("grammars/$langName")
+      for (subPath in grammar.subPaths) {
+        val subDir = File(grammarRootDir, subPath).absolutePath
+        project.logger.log(LIFECYCLE, "Generating sub-parser grammar at: $subDir")
+        project.executeCommand(subDir, tsCmd, "generate")
+      }
+    }
   }
 }

@@ -1,248 +1,339 @@
 [
   {
     "name": "aidl",
+    "composite": false,
     "src.extra": []
   },
   {
     "name": "bash",
+    "composite": false,
     "src.extra": [
       "src/scanner.c"
     ]
   },
   {
     "name": "c",
+    "composite": false,
     "src.extra": []
   },
   {
     "name": "c_sharp",
+    "composite": false,
     "src.extra": [
       "src/scanner.c"
     ]
   },
   {
     "name": "clojure",
+    "composite": false,
     "src.extra": []
   },
   {
     "name": "cmake",
+    "composite": false,
     "src.extra": [
       "src/scanner.c"
     ]
   },
   {
     "name": "containerfile",
+    "composite": false,
     "src.extra": [
       "src/scanner.c"
     ]
   },
   {
     "name": "cpp",
+    "composite": false,
     "src.extra": [
       "src/scanner.c"
     ]
   },
   {
     "name": "css",
+    "composite": false,
+    "src.extra": [
+      "src/scanner.c"
+    ]
+  },
+  {
+    "name": "dart",
+    "composite": false,
     "src.extra": [
       "src/scanner.c"
     ]
   },
   {
     "name": "diff",
+    "composite": false,
     "src.extra": []
   },
   {
     "name": "dockerfile",
+    "composite": false,
     "src.extra": [
       "src/scanner.c"
     ]
   },
   {
     "name": "elixir",
+    "composite": false,
     "src.extra": [
       "src/scanner.c"
     ]
   },
   {
     "name": "elm",
+    "composite": false,
     "src.extra": [
       "src/scanner.c"
     ]
   },
   {
     "name": "go",
+    "composite": false,
     "src.extra": []
   },
   {
     "name": "gomod",
+    "composite": false,
     "src.extra": []
   },
   {
     "name": "groovy",
+    "composite": false,
     "src.extra": [
       "src/scanner.c"
     ]
   },
   {
     "name": "haskell",
+    "composite": false,
     "src.extra": [
       "src/scanner.c"
     ]
   },
   {
     "name": "hcl",
-    "src.extra": [
-      "src/scanner.c"
-    ]
+    "composite": true,
+    "sub.paths": [
+      "dialects/terraform"
+    ],
+    "src.extra": []
   },
   {
     "name": "html",
+    "composite": false,
     "src.extra": [
       "src/scanner.c"
     ]
   },
   {
     "name": "irules",
+    "composite": false,
     "src.extra": [
       "src/scanner.c"
     ]
   },
   {
     "name": "java",
+    "composite": false,
     "src.extra": []
   },
   {
     "name": "javascript",
+    "composite": false,
     "src.extra": [
       "src/scanner.c"
     ]
   },
   {
     "name": "jsdoc",
+    "composite": false,
     "src.extra": [
       "src/scanner.c"
     ]
   },
   {
     "name": "json",
+    "composite": false,
     "src.extra": []
   },
   {
     "name": "julia",
+    "composite": false,
     "src.extra": [
       "src/scanner.c"
     ]
   },
   {
     "name": "kotlin",
+    "composite": false,
     "src.extra": [
       "src/scanner.c"
     ]
   },
   {
     "name": "latex",
+    "composite": false,
     "src.extra": [
       "src/scanner.c"
     ]
   },
   {
     "name": "log",
+    "composite": false,
     "src.extra": []
   },
   {
     "name": "lua",
+    "composite": false,
     "src.extra": [
       "src/scanner.c"
     ]
+  },
+  {
+    "name": "markdwon",
+    "composite": true,
+    "sub.paths": [
+      "tree-sitter-markdown",
+      "tree-sitter-markdown-inline"
+    ],
+    "src.extra": []
+  },
+  {
+    "name": "ocaml",
+    "composite": true,
+    "sub.paths": [
+      "grammars/interface",
+      "grammars/ocaml",
+      "grammars/type"
+    ],
+    "src.extra": []
   },
   {
     "name": "perl",
+    "composite": false,
     "src.extra": [
       "src/scanner.c"
     ]
   },
   {
+    "name": "php",
+    "composite": true,
+    "sub.paths": [
+      "php",
+      "php_only"
+    ],
+    "src.extra": []
+  },
+  {
     "name": "pkl",
+    "composite": false,
     "src.extra": [
       "src/scanner.c"
     ]
   },
   {
     "name": "properties",
+    "composite": false,
     "src.extra": []
   },
   {
     "name": "python",
+    "composite": false,
     "src.extra": [
       "src/scanner.c"
     ]
   },
   {
     "name": "query",
+    "composite": false,
     "src.extra": []
   },
   {
     "name": "ruby",
+    "composite": false,
     "src.extra": [
       "src/scanner.c"
     ]
   },
   {
     "name": "scala",
+    "composite": false,
     "src.extra": [
       "src/scanner.c"
     ]
   },
   {
     "name": "scss",
+    "composite": false,
     "src.extra": [
       "src/scanner.c"
     ]
   },
   {
     "name": "smali",
+    "composite": false,
     "src.extra": [
       "src/scanner.c"
     ]
   },
   {
     "name": "sql",
+    "composite": false,
     "src.extra": [
       "src/scanner.c"
     ]
   },
   {
     "name": "ssh",
+    "composite": false,
     "src.extra": []
   },
   {
     "name": "swift",
+    "composite": false,
     "src.extra": [
       "src/scanner.c"
     ]
   },
   {
     "name": "toml",
+    "composite": false,
     "src.extra": [
       "src/scanner.c"
     ]
   },
   {
+    "name": "typescript",
+    "composite": true,
+    "sub.paths": [
+      "tsx",
+      "typescript"
+    ],
+    "src.extra": []
+  },
+  {
     "name": "verilog",
+    "composite": false,
     "src.extra": []
   },
   {
     "name": "xml",
+    "composite": false,
     "src.extra": []
   },
   {
     "name": "yaml",
+    "composite": false,
     "src.extra": [
       "src/scanner.c"
     ]
   },
   {
     "name": "zig",
+    "composite": false,
     "src.extra": []
   }
 ]

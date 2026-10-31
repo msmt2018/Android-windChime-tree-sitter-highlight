@@ -20,35 +20,50 @@ package com.zerostudio.idea.treesitter
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.tasks.compile.JavaCompile
+import java.io.File
 
 /**
  * Plugin applied to grammar modules.
  *
  * @author Akash Yadav
+ * @author android_zero <github.com/msmt2018> [update] : On October 31, 2026, upgraded to support composite sub-paths inputs & outputs tracking.
  */
 class TsGrammarPlugin : Plugin<Project> {
 
   override fun apply(target: Project) {
     target.run {
       val grammars = target.readGrammars()
-      val (grammarName, srcExtra) = grammars.find {
+      val grammar = grammars.find {
         it.name == project.name.substringAfterLast('-')
-      }!!
+      } ?: return@run
 
-      val grammarDir = objects.directoryProperty()
-      grammarDir.set(rootProject.rootDir.resolve("grammars/$grammarName"))
+      val grammarDir = rootProject.rootDir.resolve("grammars/${grammar.name}")
 
       val generateTask = tasks.register("generateTreeSitterGrammar",
         GenerateTreeSitterGrammarTask::class.java) {
 
         dependsOn(rootProject.tasks.getByName("buildTreeSitter"))
 
-        inputs.file(grammarDir.file("grammar.js"))
-        for (extra in srcExtra) {
-          inputs.file(grammarDir.file(extra))
+        if (!grammar.composite) {
+          inputs.file(File(grammarDir, "grammar.js"))
+          for (extra in grammar.srcExtra) {
+            inputs.file(File(grammarDir, extra))
+          }
+          outputs.file(File(grammarDir, "src/parser.c"))
+        } else {
+          // 复合多解析器：为每个 subPath 注册输入 grammar.js 和输出 parser.c
+          for (subPath in grammar.subPaths) {
+            val subDir = File(grammarDir, subPath)
+            val grammarJs = File(subDir, "grammar.js")
+            if (grammarJs.exists()) {
+              inputs.file(grammarJs)
+            }
+            outputs.file(File(subDir, "src/parser.c"))
+          }
+          for (extra in grammar.srcExtra) {
+            inputs.file(File(grammarDir, extra))
+          }
         }
-
-        outputs.file(grammarDir.file("src/parser.c"))
       }
       tasks.withType(JavaCompile::class.java) { dependsOn(generateTask) }
     }

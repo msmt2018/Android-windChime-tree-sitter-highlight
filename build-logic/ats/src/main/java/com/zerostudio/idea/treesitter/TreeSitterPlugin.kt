@@ -41,6 +41,7 @@ import java.util.Locale
  * Marker plugin.
  *
  * @author Akash Yadav
+ * @author android_zero <github.com/msmt2018> [update] : On October 31, 2026, enhanced support for composite multi-parser tree-sitter modules.
  */
 class TreeSitterPlugin : Plugin<Project> {
 
@@ -55,7 +56,7 @@ class TreeSitterPlugin : Plugin<Project> {
           // Build tree-sitter library first
           dependsOn(rootProject.tasks.getByName("buildTreeSitter"))
 
-          // Generate the tree sitter parser from grammar.js
+          // Generate the tree sitter parser from grammar.js (supports single & composite sub-parsers)
           tasks.findByName("generateTreeSitterGrammar")?.also { dependsOn(it) }
 
           this.cppDir.set(cppDir)
